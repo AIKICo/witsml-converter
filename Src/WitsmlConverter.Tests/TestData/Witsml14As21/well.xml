@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Well xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.energistics.org/energyml/data/witsmlv2 file:///C:/Projects/Energistics/Repo/energyml/data/witsml/v2.1/xsd_schemas/Well.xsd" uuid="00000000-0000-0000-0000-000000000000" schemaVersion="2.1" xmlns="http://www.energistics.org/energyml/data/witsmlv2">
+<Well xmlns:eml="http://www.energistics.org/energyml/data/commonv2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.energistics.org/energyml/data/witsmlv2 file:///D:/Repos/witsml-converter/Mappings/Energistics/energyml/data/witsml/v2.1/xsd_schemas/Well.xsd" uuid="00000000-0000-0000-0000-000000000000" schemaVersion="2.1" xmlns="http://www.energistics.org/energyml/data/witsmlv2">
   <eml:Aliases authority="1.4.1.1">
     <eml:Identifier>w-12</eml:Identifier>
     <eml:Description>Identifier is created from the uid of the input scheme</eml:Description>
@@ -36,4 +36,21 @@
   <DTimSpud>2001-05-31T08:15:00Z</DTimSpud>
   <DTimPa>2001-07-15T15:30:00Z</DTimPa>
   <WaterDepth uom="ft">520</WaterDepth>
+  <InformationalGeographicLocationWGS84>
+    <eml:Latitude uom="dega">0</eml:Latitude>
+    <eml:Longitude uom="dega">0</eml:Longitude>
+    <eml:GeographicCrs>
+      <eml:Uuid>00000000-0000-0000-0000-000000000000</eml:Uuid>
+      <eml:QualifiedType>eml23.GeodeticEpsgCrs</eml:QualifiedType>
+      <eml:Title>4326</eml:Title>
+    </eml:GeographicCrs>
+  </InformationalGeographicLocationWGS84>
+  <WellheadElevation xsi:type="eml:ReferencePointElevation">
+    <eml:Elevation uom="ft">500</eml:Elevation>
+    <eml:ReferencePoint>
+      <eml:Uuid>00000000-0000-0000-0000-000000000000</eml:Uuid>
+      <eml:QualifiedType>undefined</eml:QualifiedType>
+      <eml:Title>unknown</eml:Title>
+    </eml:ReferencePoint>
+  </WellheadElevation>
 </Well>

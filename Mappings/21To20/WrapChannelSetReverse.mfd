@@ -16,7 +16,7 @@
 					</data>
 				</component>
 				<component name="ChannelSet" library="xml" uid="22" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
+					<properties XSLTTargetEncoding="UTF-8" EnableMinMaxOccursOptimizations="0"/>
 					<view ltx="33" lty="137" rbx="333" rby="637"/>
 					<data>
 						<root scrollposition="2">
@@ -39,11 +39,11 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\energyml\2.1\data\witsml\v2.1\xsd_schemas\Log.xsd" instanceroot="{http://www.energistics.org/energyml/data/witsmlv2}ChannelSet" outputinstance="..\..\energyml\2.1\data\witsml\v2.1\xsd_schemas\Log.xml"/>
+						<document schema="..\Energistics\energyml\data\witsml\v2.1\xsd_schemas\Log.xsd" instanceroot="{http://www.energistics.org/energyml/data/witsmlv2}ChannelSet" outputinstance="..\Energistics\energyml\data\witsml\v2.1\xsd_schemas\Log.xml"/>
 					</data>
 				</component>
 				<component name="LogFromChannelSet" library="xml" uid="21" kind="14">
-					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<properties XSLTTargetEncoding="UTF-8" EnableMinMaxOccursOptimizations="0" XSLTDefaultOutput="1"/>
 					<view ltx="698" lty="137" rbx="998" rby="637"/>
 					<data>
 						<root scrollposition="2">
@@ -67,7 +67,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\energyml\2.1\data\witsml\v2.1\xsd_schemas\Log.xsd" instanceroot="{http://www.energistics.org/energyml/data/witsmlv2}Log" outputinstance="..\..\energyml\2.1\data\witsml\v2.1\xsd_schemas\Log.xml"/>
+						<document schema="..\Energistics\energyml\data\witsml\v2.1\xsd_schemas\Log.xsd" instanceroot="{http://www.energistics.org/energyml/data/witsmlv2}Log" outputinstance="..\Energistics\energyml\data\witsml\v2.1\xsd_schemas\Log.xml"/>
 					</data>
 				</component>
 				<component name="constant" library="core" uid="20" kind="2">

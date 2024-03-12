@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--  MapForce Project File  -->
-<Project Expanded="Yes" language="xslt2" OutputDir="output\" Title="WITSML21To20" OutputName="WITSML21To20" Version="6">
+<Project Expanded="Yes" language="cs" OutputDir="output\" Title="WITSML21To20" OutputName="Map21To20" Version="6">
 	<Folder FolderName="Mapping Folder" Expanded="Yes" Type="MappingFolder">
 		<File Type="Mapping" FilePath="LogReverse.mfd"/>
 		<File Type="Mapping" FilePath="RigReverse.mfd"/>

@@ -70,7 +70,7 @@
 					</data>
 				</component>
 				<component name="Trajectory" library="xml" uid="2" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
+					<properties XSLTTargetEncoding="UTF-8" EnableMinMaxOccursOptimizations="0"/>
 					<view rbx="347" rby="884"/>
 					<data>
 						<root scrollposition="3760">
@@ -221,7 +221,7 @@
 					</data>
 				</component>
 				<component name="Trajectory" library="xml" uid="3" kind="14">
-					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1" EnableMinMaxOccursOptimizations="0"/>
 					<view ltx="818" lty="-10" rbx="1264" rby="884"/>
 					<data>
 						<root scrollposition="6506">

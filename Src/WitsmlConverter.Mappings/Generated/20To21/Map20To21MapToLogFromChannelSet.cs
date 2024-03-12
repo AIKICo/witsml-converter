@@ -35,35 +35,35 @@ namespace Map20To21
 
 		#region Members		
 		// instances
-		protected XmlNode m_ChannelSetInstance;
+		protected XmlNode m_ChannelSet2Instance;
 		// members
 		#endregion //Members
 
 
-		public void Run(String ChannelSetSourceFilename, string LogFromChannelSetTargetFilename)
+		public void Run(String ChannelSet2SourceFilename, string LogFromChannelSetTargetFilename)
 		{
 			// open source streams
-			using (Altova.IO.Input ChannelSetSource = new Altova.IO.FileInput(ChannelSetSourceFilename))
+			using (Altova.IO.Input ChannelSet2Source = new Altova.IO.FileInput(ChannelSet2SourceFilename))
 			// open target stream
 			using (Altova.IO.Output LogFromChannelSetTarget = new Altova.IO.FileOutput(LogFromChannelSetTargetFilename))
 			{
 				// run
-				Run(ChannelSetSource, LogFromChannelSetTarget);
+				Run(ChannelSet2Source, LogFromChannelSetTarget);
 			}
 		}
 
-		public void Run(Altova.IO.Input ChannelSetSource, Altova.IO.Output LogFromChannelSetTarget)
+		public void Run(Altova.IO.Input ChannelSet2Source, Altova.IO.Output LogFromChannelSetTarget)
 		{
 			try
 			{
 				// Open the source(s)
-			WriteTrace("Loading " + ChannelSetSource.Filename + "...\n");
-			XmlDocument ChannelSetDocSourceObject = XmlTreeOperations.LoadDocument(ChannelSetSource);
+			WriteTrace("Loading " + ChannelSet2Source.Filename + "...\n");
+			XmlDocument ChannelSet2DocSourceObject = XmlTreeOperations.LoadDocument(ChannelSet2Source);
 
 
-			m_ChannelSetInstance = ChannelSetDocSourceObject;
+			m_ChannelSet2Instance = ChannelSet2DocSourceObject;
 			if (runDoesCloseAll)
-				ChannelSetSource.Close();
+				ChannelSet2Source.Close();
 				// Create the target
 				XmlDocument LogFromChannelSetDoc = (LogFromChannelSetTarget.Type == Altova.IO.Output.OutputType.XmlDocument) ? LogFromChannelSetTarget.Document : new XmlDocument();
 				// create processing instruction etc...
@@ -71,7 +71,7 @@ namespace Map20To21
 				// Execute mapping
 
 			main mapping = new main( 
-				new Altova.Mapforce.DOMDocumentNodeAsMFNodeAdapter(m_ChannelSetInstance, ChannelSetSource.Filename));
+				new Altova.Mapforce.DOMDocumentNodeAsMFNodeAdapter(m_ChannelSet2Instance, ChannelSet2Source.Filename));
 
 			Altova.Mapforce.MFDomWriter.Write(mapping, LogFromChannelSetDoc);
 
@@ -94,7 +94,7 @@ namespace Map20To21
 				// Close the Source Library
 				if (runDoesCloseAll)
 				{
-					ChannelSetSource.Close();
+					ChannelSet2Source.Close();
 					LogFromChannelSetTarget.Close();
 				}
 
@@ -178,11 +178,14 @@ namespace Map20To21
 				private IEnumerator var3_ChannelSet;
 				private IEnumerator var4_objectVersion;
 				private IEnumerator var5_ChannelSet;
-				private IEnumerator var6_ChannelSet;
+				private IEnumerator var6_schemaVersion;
 				private IEnumerator var7_ChannelSet;
-				private IEnumerator var8_existenceKind;
+				private IEnumerator var8_uuid;
 				private IEnumerator var9_ChannelSet;
-				private IEnumerator var10_ChannelSet;
+				private IEnumerator var10_existenceKind;
+				private IEnumerator var11_ChannelSet;
+				private IEnumerator var12_Citation;
+				private IEnumerator var13_ChannelSet;
 				public Enumerator(seq1_join closure) 
 				{
 					this.closure = closure;
@@ -235,7 +238,7 @@ namespace Map20To21
 							return true;
 						case 8:
 							state = 9;
-							current = Altova.Functions.Core.CreateAttribute(Altova.Functions.Core.CreateQName("xsi:schemaLocation", "http://www.w3.org/2001/XMLSchema-instance"), Altova.Functions.Core.Box("http://www.energistics.org/energyml/data/witsmlv2 file:///D:/Repos/witsmlvalidation/witsml/energyml/2.0/data/witsml/v2.0/xsd_schemas/Log.xsd"));
+							current = Altova.Functions.Core.CreateAttribute(Altova.Functions.Core.CreateQName("xsi:schemaLocation", "http://www.w3.org/2001/XMLSchema-instance"), Altova.Functions.Core.Box("http://www.energistics.org/energyml/data/witsmlv2 file:///D:/Repos/witsml-converter/Mappings/Energistics/energyml/data/witsml/v2.0/xsd_schemas/Log.xsd"));
 							pos++;
 							return true;
 						case 9:
@@ -263,72 +266,99 @@ namespace Map20To21
 							Altova.Mapforce.MFEnumerator.Dispose(var4_objectVersion); var4_objectVersion = null;
 							goto case 10;
 						case 15:
-							state = 15;
+							state = 17;
 							if (!var5_ChannelSet.MoveNext()) { state = 16; goto case 16; }
-							current = Altova.Functions.Core.CreateAttribute(Altova.Functions.Core.CreateQName("schemaVersion", ""), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)Altova.Functions.Core.First(Altova.Functions.Core.FilterAttributes(Altova.Functions.Core.CreateQName("schemaVersion", ""), (Altova.Mapforce.IMFNode)(var5_ChannelSet.Current))))));
-							pos++;
-							return true;
+							var6_schemaVersion = (Altova.Functions.Core.FilterAttributes(Altova.Functions.Core.CreateQName("schemaVersion", ""), (Altova.Mapforce.IMFNode)(var5_ChannelSet.Current))).GetEnumerator();
+							goto case 17;
 						case 16:
-							state = 18;
+							state = 20;
 							Altova.Mapforce.MFEnumerator.Dispose(var5_ChannelSet); var5_ChannelSet = null;
-							var6_ChannelSet = (closure.var2_ChannelSet).GetEnumerator();
-							goto case 18;
-						case 18:
-							state = 18;
-							if (!var6_ChannelSet.MoveNext()) { state = 19; goto case 19; }
-							current = Altova.Functions.Core.CreateAttribute(Altova.Functions.Core.CreateQName("uuid", ""), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)Altova.Functions.Core.First(Altova.Functions.Core.FilterAttributes(Altova.Functions.Core.CreateQName("uuid", ""), (Altova.Mapforce.IMFNode)(var6_ChannelSet.Current))))));
+							var7_ChannelSet = (closure.var2_ChannelSet).GetEnumerator();
+							goto case 20;
+						case 17:
+							state = 17;
+							if (!var6_schemaVersion.MoveNext()) { state = 18; goto case 18; }
+							current = Altova.Functions.Core.CreateAttribute(Altova.Functions.Core.CreateQName("schemaVersion", ""), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var6_schemaVersion.Current))));
 							pos++;
 							return true;
-						case 19:
-							state = 21;
-							Altova.Mapforce.MFEnumerator.Dispose(var6_ChannelSet); var6_ChannelSet = null;
-							var7_ChannelSet = (closure.var2_ChannelSet).GetEnumerator();
-							goto case 21;
+						case 18:
+							state = 15;
+							Altova.Mapforce.MFEnumerator.Dispose(var6_schemaVersion); var6_schemaVersion = null;
+							goto case 15;
+						case 20:
+							state = 22;
+							if (!var7_ChannelSet.MoveNext()) { state = 21; goto case 21; }
+							var8_uuid = (Altova.Functions.Core.FilterAttributes(Altova.Functions.Core.CreateQName("uuid", ""), (Altova.Mapforce.IMFNode)(var7_ChannelSet.Current))).GetEnumerator();
+							goto case 22;
 						case 21:
-							state = 23;
-							if (!var7_ChannelSet.MoveNext()) { state = 22; goto case 22; }
-							var8_existenceKind = (Altova.Functions.Core.FilterAttributes(Altova.Functions.Core.CreateQName("existenceKind", ""), (Altova.Mapforce.IMFNode)(var7_ChannelSet.Current))).GetEnumerator();
-							goto case 23;
-						case 22:
-							state = 26;
+							state = 25;
 							Altova.Mapforce.MFEnumerator.Dispose(var7_ChannelSet); var7_ChannelSet = null;
 							var9_ChannelSet = (closure.var2_ChannelSet).GetEnumerator();
-							goto case 26;
+							goto case 25;
+						case 22:
+							state = 22;
+							if (!var8_uuid.MoveNext()) { state = 23; goto case 23; }
+							current = Altova.Functions.Core.CreateAttribute(Altova.Functions.Core.CreateQName("uuid", ""), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var8_uuid.Current))));
+							pos++;
+							return true;
 						case 23:
-							state = 23;
-							if (!var8_existenceKind.MoveNext()) { state = 24; goto case 24; }
-							current = Altova.Functions.Core.CreateAttribute(Altova.Functions.Core.CreateQName("existenceKind", ""), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var8_existenceKind.Current))));
-							pos++;
-							return true;
-						case 24:
-							state = 21;
-							Altova.Mapforce.MFEnumerator.Dispose(var8_existenceKind); var8_existenceKind = null;
-							goto case 21;
+							state = 20;
+							Altova.Mapforce.MFEnumerator.Dispose(var8_uuid); var8_uuid = null;
+							goto case 20;
+						case 25:
+							state = 27;
+							if (!var9_ChannelSet.MoveNext()) { state = 26; goto case 26; }
+							var10_existenceKind = (Altova.Functions.Core.FilterAttributes(Altova.Functions.Core.CreateQName("existenceKind", ""), (Altova.Mapforce.IMFNode)(var9_ChannelSet.Current))).GetEnumerator();
+							goto case 27;
 						case 26:
-							state = 26;
-							if (!var9_ChannelSet.MoveNext()) { state = 27; goto case 27; }
-							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("eml:Citation", "http://www.energistics.org/energyml/data/commonv2"), (new seq2_join((Altova.Mapforce.IMFNode)(var9_ChannelSet.Current))));
+							state = 30;
+							Altova.Mapforce.MFEnumerator.Dispose(var9_ChannelSet); var9_ChannelSet = null;
+							var11_ChannelSet = (closure.var2_ChannelSet).GetEnumerator();
+							goto case 30;
+						case 27:
+							state = 27;
+							if (!var10_existenceKind.MoveNext()) { state = 28; goto case 28; }
+							current = Altova.Functions.Core.CreateAttribute(Altova.Functions.Core.CreateQName("existenceKind", ""), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var10_existenceKind.Current))));
 							pos++;
 							return true;
-						case 27:
-							state = 29;
-							Altova.Mapforce.MFEnumerator.Dispose(var9_ChannelSet); var9_ChannelSet = null;
+						case 28:
+							state = 25;
+							Altova.Mapforce.MFEnumerator.Dispose(var10_existenceKind); var10_existenceKind = null;
+							goto case 25;
+						case 30:
+							state = 32;
+							if (!var11_ChannelSet.MoveNext()) { state = 31; goto case 31; }
+							var12_Citation = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("Citation", "http://www.energistics.org/energyml/data/commonv2"), (Altova.Mapforce.IMFNode)(var11_ChannelSet.Current))).GetEnumerator();
+							goto case 32;
+						case 31:
+							state = 35;
+							Altova.Mapforce.MFEnumerator.Dispose(var11_ChannelSet); var11_ChannelSet = null;
 							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("Wellbore", "http://www.energistics.org/energyml/data/witsmlv2"), (new seq3_seq_(closure.var1_box)));
 							pos++;
 							return true;
-						case 29:
-							state = 30;
-							var10_ChannelSet = (closure.var2_ChannelSet).GetEnumerator();
-							goto case 30;
-						case 30:
-							state = 30;
-							if (!var10_ChannelSet.MoveNext()) { state = 31; goto case 31; }
-							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("ChannelSet", "http://www.energistics.org/energyml/data/witsmlv2"), (new seq4_join((Altova.Mapforce.IMFNode)(var10_ChannelSet.Current))));
+						case 32:
+							state = 32;
+							if (!var12_Citation.MoveNext()) { state = 33; goto case 33; }
+							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("eml:Citation", "http://www.energistics.org/energyml/data/commonv2"), (new seq2_join((Altova.Mapforce.IMFNode)(var12_Citation.Current))));
 							pos++;
 							return true;
-						case 31:
+						case 33:
+							state = 30;
+							Altova.Mapforce.MFEnumerator.Dispose(var12_Citation); var12_Citation = null;
+							goto case 30;
+						case 35:
+							state = 36;
+							var13_ChannelSet = (closure.var2_ChannelSet).GetEnumerator();
+							goto case 36;
+						case 36:
+							state = 36;
+							if (!var13_ChannelSet.MoveNext()) { state = 37; goto case 37; }
+							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("ChannelSet", "http://www.energistics.org/energyml/data/witsmlv2"), (new seq2_join((Altova.Mapforce.IMFNode)(var13_ChannelSet.Current))));
+							pos++;
+							return true;
+						case 37:
 							state = 0;
-							Altova.Mapforce.MFEnumerator.Dispose(var10_ChannelSet); var10_ChannelSet = null;
+							Altova.Mapforce.MFEnumerator.Dispose(var13_ChannelSet); var13_ChannelSet = null;
 							return false;
 						}
 					}
@@ -339,12 +369,15 @@ namespace Map20To21
 				{
 					Altova.Mapforce.MFEnumerator.Dispose(var4_objectVersion); var4_objectVersion = null;
 					Altova.Mapforce.MFEnumerator.Dispose(var3_ChannelSet); var3_ChannelSet = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var6_schemaVersion); var6_schemaVersion = null;
 					Altova.Mapforce.MFEnumerator.Dispose(var5_ChannelSet); var5_ChannelSet = null;
-					Altova.Mapforce.MFEnumerator.Dispose(var6_ChannelSet); var6_ChannelSet = null;
-					Altova.Mapforce.MFEnumerator.Dispose(var8_existenceKind); var8_existenceKind = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var8_uuid); var8_uuid = null;
 					Altova.Mapforce.MFEnumerator.Dispose(var7_ChannelSet); var7_ChannelSet = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var10_existenceKind); var10_existenceKind = null;
 					Altova.Mapforce.MFEnumerator.Dispose(var9_ChannelSet); var9_ChannelSet = null;
-					Altova.Mapforce.MFEnumerator.Dispose(var10_ChannelSet); var10_ChannelSet = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var12_Citation); var12_Citation = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var11_ChannelSet); var11_ChannelSet = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var13_ChannelSet); var13_ChannelSet = null;
 				}
 			}
 		}
@@ -367,9 +400,8 @@ namespace Map20To21
 				private object current = null;
 				private int pos = 0;
 				private readonly seq2_join closure;
-				private Altova.Mapforce.IMFNode var2_Citation;
-				private IEnumerator var3_select_attributes;
-				private IEnumerator var4_select_children;
+				private IEnumerator var2_select_attributes;
+				private IEnumerator var3_select_children;
 				public Enumerator(seq2_join closure) 
 				{
 					this.closure = closure;
@@ -387,29 +419,28 @@ namespace Map20To21
 						{
 						case 1:
 							state = 2;
-							var2_Citation = ((Altova.Mapforce.IMFNode)Altova.Functions.Core.First(Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("Citation", "http://www.energistics.org/energyml/data/commonv2"), closure.var1_cur)));
-							var3_select_attributes = (Altova.Functions.Core.SelectAttributes(var2_Citation)).GetEnumerator();
+							var2_select_attributes = (Altova.Functions.Core.SelectAttributes(closure.var1_cur)).GetEnumerator();
 							goto case 2;
 						case 2:
 							state = 2;
-							if (!var3_select_attributes.MoveNext()) { state = 3; goto case 3; }
-							current = var3_select_attributes.Current;
+							if (!var2_select_attributes.MoveNext()) { state = 3; goto case 3; }
+							current = var2_select_attributes.Current;
 							pos++;
 							return true;
 						case 3:
 							state = 5;
-							Altova.Mapforce.MFEnumerator.Dispose(var3_select_attributes); var3_select_attributes = null;
-							var4_select_children = (Altova.Functions.Core.SelectChildren(var2_Citation)).GetEnumerator();
+							Altova.Mapforce.MFEnumerator.Dispose(var2_select_attributes); var2_select_attributes = null;
+							var3_select_children = (Altova.Functions.Core.SelectChildren(closure.var1_cur)).GetEnumerator();
 							goto case 5;
 						case 5:
 							state = 5;
-							if (!var4_select_children.MoveNext()) { state = 6; goto case 6; }
-							current = var4_select_children.Current;
+							if (!var3_select_children.MoveNext()) { state = 6; goto case 6; }
+							current = var3_select_children.Current;
 							pos++;
 							return true;
 						case 6:
 							state = 0;
-							Altova.Mapforce.MFEnumerator.Dispose(var4_select_children); var4_select_children = null;
+							Altova.Mapforce.MFEnumerator.Dispose(var3_select_children); var3_select_children = null;
 							return false;
 						}
 					}
@@ -418,8 +449,8 @@ namespace Map20To21
 
 				public void Dispose() 
 				{
-					Altova.Mapforce.MFEnumerator.Dispose(var3_select_attributes); var3_select_attributes = null;
-					Altova.Mapforce.MFEnumerator.Dispose(var4_select_children); var4_select_children = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var2_select_attributes); var2_select_attributes = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var3_select_children); var3_select_children = null;
 				}
 			}
 		}
@@ -479,79 +510,6 @@ namespace Map20To21
 
 				public void Dispose() 
 				{
-				}
-			}
-		}
-		class seq4_join : IEnumerable
-		{
-			private readonly Altova.Mapforce.IMFNode var1_cur;
-
-			public seq4_join(
-				Altova.Mapforce.IMFNode var1_cur
-			)
-			{
-				this.var1_cur = var1_cur;
-			}
-
-			public IEnumerator GetEnumerator() { return new Enumerator(this); }
-
-			class Enumerator : Altova.Mapforce.IMFEnumerator
-			{
-				private int state = 1;
-				private object current = null;
-				private int pos = 0;
-				private readonly seq4_join closure;
-				private IEnumerator var2_select_attributes;
-				private IEnumerator var3_select_children;
-				public Enumerator(seq4_join closure) 
-				{
-					this.closure = closure;
-				}
-
-				public void Reset() { state = 0; pos = 0;}
-				public int Position { get { return pos; } }
-				public object Current { get { return current; } }
-
-				public bool MoveNext()
-				{
-					while (state != 0)
-					{
-						switch (state) 
-						{
-						case 1:
-							state = 2;
-							var2_select_attributes = (Altova.Functions.Core.SelectAttributes(closure.var1_cur)).GetEnumerator();
-							goto case 2;
-						case 2:
-							state = 2;
-							if (!var2_select_attributes.MoveNext()) { state = 3; goto case 3; }
-							current = var2_select_attributes.Current;
-							pos++;
-							return true;
-						case 3:
-							state = 5;
-							Altova.Mapforce.MFEnumerator.Dispose(var2_select_attributes); var2_select_attributes = null;
-							var3_select_children = (Altova.Functions.Core.SelectChildren(closure.var1_cur)).GetEnumerator();
-							goto case 5;
-						case 5:
-							state = 5;
-							if (!var3_select_children.MoveNext()) { state = 6; goto case 6; }
-							current = var3_select_children.Current;
-							pos++;
-							return true;
-						case 6:
-							state = 0;
-							Altova.Mapforce.MFEnumerator.Dispose(var3_select_children); var3_select_children = null;
-							return false;
-						}
-					}
-					return false;
-				}
-
-				public void Dispose() 
-				{
-					Altova.Mapforce.MFEnumerator.Dispose(var2_select_attributes); var2_select_attributes = null;
-					Altova.Mapforce.MFEnumerator.Dispose(var3_select_children); var3_select_children = null;
 				}
 			}
 		}

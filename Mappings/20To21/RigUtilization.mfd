@@ -61,7 +61,7 @@
 					</data>
 				</component>
 				<component name="RigUtilization" library="xml" uid="2" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
+					<properties XSLTTargetEncoding="UTF-8" EnableMinMaxOccursOptimizations="0"/>
 					<view rbx="305" rby="961"/>
 					<data>
 						<root scrollposition="2">
@@ -388,7 +388,7 @@
 					</data>
 				</component>
 				<component name="RigUtilization" library="xml" uid="3" kind="14">
-					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1" EnableMinMaxOccursOptimizations="0"/>
 					<view ltx="815" lty="10" rbx="1300" rby="971"/>
 					<data>
 						<root scrollposition="2">

@@ -214,7 +214,7 @@ namespace Map20To21
 							return true;
 						case 2:
 							state = 3;
-							current = Altova.Functions.Core.CreateAttribute(Altova.Functions.Core.CreateQName("xsi:schemaLocation", "http://www.w3.org/2001/XMLSchema-instance"), Altova.Functions.Core.Box("http://www.energistics.org/energyml/data/witsmlv2 file:///C:/Projects/Energistics/Repo/energyml/data/witsml/v2.1/xsd_schemas/Wellbore.xsd"));
+							current = Altova.Functions.Core.CreateAttribute(Altova.Functions.Core.CreateQName("xsi:schemaLocation", "http://www.w3.org/2001/XMLSchema-instance"), Altova.Functions.Core.Box("http://www.energistics.org/energyml/data/witsmlv2 file:///D:/Repos/witsml-converter/Mappings/Energistics/energyml/data/witsml/v2.1/xsd_schemas/Wellbore.xsd"));
 							pos++;
 							return true;
 						case 3:
@@ -290,7 +290,7 @@ namespace Map20To21
 						case 20:
 							state = 20;
 							if (!var7_ExtensionNameValue.MoveNext()) { state = 21; goto case 21; }
-							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("eml:ExtensionNameValue", "http://www.energistics.org/energyml/data/commonv2"), tbf.tbf1_ExtensionNameValue.Eval((Altova.Mapforce.IMFNode)(var7_ExtensionNameValue.Current)));
+							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("eml:ExtensionNameValue", "http://www.energistics.org/energyml/data/commonv2"), tbf.tbf18_ExtensionNameValue.Eval((Altova.Mapforce.IMFNode)(var7_ExtensionNameValue.Current)));
 							pos++;
 							return true;
 						case 21:

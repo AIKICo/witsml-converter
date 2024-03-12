@@ -35,35 +35,35 @@ namespace Map20To21
 
 		#region Members		
 		// instances
-		protected XmlNode m_Log2Instance;
+		protected XmlNode m_Log5Instance;
 		// members
 		#endregion //Members
 
 
-		public void Run(String Log2SourceFilename, string ChannelSetFromLogTargetFilename)
+		public void Run(String Log5SourceFilename, string ChannelSetFromLogTargetFilename)
 		{
 			// open source streams
-			using (Altova.IO.Input Log2Source = new Altova.IO.FileInput(Log2SourceFilename))
+			using (Altova.IO.Input Log5Source = new Altova.IO.FileInput(Log5SourceFilename))
 			// open target stream
 			using (Altova.IO.Output ChannelSetFromLogTarget = new Altova.IO.FileOutput(ChannelSetFromLogTargetFilename))
 			{
 				// run
-				Run(Log2Source, ChannelSetFromLogTarget);
+				Run(Log5Source, ChannelSetFromLogTarget);
 			}
 		}
 
-		public void Run(Altova.IO.Input Log2Source, Altova.IO.Output ChannelSetFromLogTarget)
+		public void Run(Altova.IO.Input Log5Source, Altova.IO.Output ChannelSetFromLogTarget)
 		{
 			try
 			{
 				// Open the source(s)
-			WriteTrace("Loading " + Log2Source.Filename + "...\n");
-			XmlDocument Log2DocSourceObject = XmlTreeOperations.LoadDocument(Log2Source);
+			WriteTrace("Loading " + Log5Source.Filename + "...\n");
+			XmlDocument Log5DocSourceObject = XmlTreeOperations.LoadDocument(Log5Source);
 
 
-			m_Log2Instance = Log2DocSourceObject;
+			m_Log5Instance = Log5DocSourceObject;
 			if (runDoesCloseAll)
-				Log2Source.Close();
+				Log5Source.Close();
 				// Create the target
 				XmlDocument ChannelSetFromLogDoc = (ChannelSetFromLogTarget.Type == Altova.IO.Output.OutputType.XmlDocument) ? ChannelSetFromLogTarget.Document : new XmlDocument();
 				// create processing instruction etc...
@@ -71,7 +71,7 @@ namespace Map20To21
 				// Execute mapping
 
 			main mapping = new main( 
-				new Altova.Mapforce.DOMDocumentNodeAsMFNodeAdapter(m_Log2Instance, Log2Source.Filename));
+				new Altova.Mapforce.DOMDocumentNodeAsMFNodeAdapter(m_Log5Instance, Log5Source.Filename));
 
 			Altova.Mapforce.MFDomWriter.Write(mapping, ChannelSetFromLogDoc);
 
@@ -94,7 +94,7 @@ namespace Map20To21
 				// Close the Source Library
 				if (runDoesCloseAll)
 				{
-					Log2Source.Close();
+					Log5Source.Close();
 					ChannelSetFromLogTarget.Close();
 				}
 
@@ -194,7 +194,7 @@ namespace Map20To21
 							return true;
 						case 2:
 							state = 3;
-							current = Altova.Functions.Core.CreateAttribute(Altova.Functions.Core.CreateQName("xsi:schemaLocation", "http://www.w3.org/2001/XMLSchema-instance"), Altova.Functions.Core.Box("http://www.energistics.org/energyml/data/witsmlv2 file:///D:/Repos/witsmlvalidation/witsml/energyml/2.1/data/witsml/v2.1/xsd_schemas/Log.xsd"));
+							current = Altova.Functions.Core.CreateAttribute(Altova.Functions.Core.CreateQName("xsi:schemaLocation", "http://www.w3.org/2001/XMLSchema-instance"), Altova.Functions.Core.Box("http://www.energistics.org/energyml/data/witsmlv2 file:///D:/Repos/witsml-converter/Mappings/Energistics/energyml/data/witsml/v2.1/xsd_schemas/Log.xsd"));
 							pos++;
 							return true;
 						case 3:

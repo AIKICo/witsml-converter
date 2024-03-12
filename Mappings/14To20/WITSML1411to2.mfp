@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--  MapForce Project File  -->
-<Project Expanded="Yes" language="cs" OutputDir="XSLT2" Title="WITSML1411to2" OutputName="Map14To20" Version="6">
+<Project Expanded="Yes" language="cs" OutputDir="output" Title="WITSML1411to2" OutputName="Map14To20" Version="6">
 	<Folder FolderName="Mapping Folder" Expanded="Yes" Type="MappingFolder">
 		<File Type="Mapping" FilePath="Attachment.mfd"/>
 		<File Type="Mapping" FilePath="BhaRun.mfd"/>

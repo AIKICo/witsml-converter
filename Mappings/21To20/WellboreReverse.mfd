@@ -25,7 +25,7 @@
 					</data>
 				</component>
 				<component name="Wellbore" library="xml" uid="2" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
+					<properties XSLTTargetEncoding="UTF-8" EnableMinMaxOccursOptimizations="0"/>
 					<view rbx="321" rby="585"/>
 					<data>
 						<root scrollposition="1930">
@@ -124,11 +124,11 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\Repo\energyml\data\witsml\v2.1\xsd_schemas\Wellbore.xsd" instanceroot="{http://www.energistics.org/energyml/data/witsmlv2}Wellbore" inputinstance="..\Repo\energyml\data\witsml\v2.1\xsd_schemas\Wellbore.xml"/>
+						<document schema="..\Energistics\energyml\data\witsml\v2.1\xsd_schemas\Wellbore.xsd" instanceroot="{http://www.energistics.org/energyml/data/witsmlv2}Wellbore" inputinstance="..\Energistics\energyml\data\witsml\v2.1\xsd_schemas\Wellbore.xml"/>
 					</data>
 				</component>
 				<component name="Wellbore" library="xml" uid="3" kind="14">
-					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<properties XSLTTargetEncoding="UTF-8" EnableMinMaxOccursOptimizations="0" XSLTDefaultOutput="1"/>
 					<view ltx="677" rbx="982" rby="585"/>
 					<data>
 						<root scrollposition="588">
@@ -209,7 +209,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\Repo\energyml\data\witsml\v2.0\xsd_schemas\Wellbore.xsd" instanceroot="{http://www.energistics.org/energyml/data/witsmlv2}Wellbore" inputinstance="..\Repo\energyml\data\witsml\v2.0\xml_examples\Wellbore.xml" outputinstance="..\Repo\energyml\data\witsml\v2.0\xml_examples\Wellbore.xml"/>
+						<document schema="..\Energistics\energyml\data\witsml\v2.0\xsd_schemas\Wellbore.xsd" instanceroot="{http://www.energistics.org/energyml/data/witsmlv2}Wellbore" inputinstance="..\Energistics\energyml\data\witsml\v2.0\xml_examples\Wellbore.xml" outputinstance="..\Energistics\energyml\data\witsml\v2.0\xml_examples\Wellbore.xml"/>
 					</data>
 				</component>
 			</children>

@@ -16,7 +16,7 @@
 					</data>
 				</component>
 				<component name="Rig" library="xml" uid="2" kind="14">
-					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<properties XSLTTargetEncoding="UTF-8" EnableMinMaxOccursOptimizations="0" XSLTDefaultOutput="1"/>
 					<view ltx="759" rbx="1119" rby="933"/>
 					<data>
 						<root scrollposition="205">
@@ -94,11 +94,11 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\Repo\energyml\data\witsml\v2.0\xsd_schemas\Rig.xsd" instanceroot="{}Rig" inputinstance="..\WITSML\energyml\data\witsml\v2.0\xsd_schemas\Rig.xml"/>
+						<document schema="..\Energistics\energyml\data\witsml\v2.0\xsd_schemas\Rig.xsd" instanceroot="{}Rig" inputinstance="..\Energistics\energyml\data\witsml\v2.0\xsd_schemas\Rig.xml"/>
 					</data>
 				</component>
 				<component name="Rig" library="xml" uid="3" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
+					<properties XSLTTargetEncoding="UTF-8" EnableMinMaxOccursOptimizations="0"/>
 					<view rbx="437" rby="933"/>
 					<data>
 						<root scrollposition="154">
@@ -179,7 +179,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\Standards\energyML_202205\energyml\data\witsml\v2.1\xsd_schemas\Rig.xsd" instanceroot="{}Rig" inputinstance="..\Standards\energyML_202205\energyml\data\witsml\v2.1\xsd_schemas\Rig.xml"/>
+						<document schema="..\Energistics\energyml\data\witsml\v2.1\xsd_schemas\Rig.xsd" instanceroot="{}Rig" inputinstance="..\Energistics\energyml\data\witsml\v2.1\xsd_schemas\Rig.xml"/>
 					</data>
 				</component>
 			</children>

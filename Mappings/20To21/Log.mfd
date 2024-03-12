@@ -88,8 +88,158 @@
 						<constant value="witsml21.Wellbore" datatype="string"/>
 					</data>
 				</component>
+				<component name="Log" library="xml" uid="3" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" EnableMinMaxOccursOptimizations="0"/>
+					<view ltx="-80" lty="-7" rbx="541" rby="943"/>
+					<data>
+						<root scrollposition="286">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.energistics.org/energyml/data/commonv2"/>
+									<namespace uid="http://www.energistics.org/energyml/data/witsmlv2"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="3" expanded="1">
+								<entry name="document" ns="3" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="Log" ns="2" outkey="1" expanded="1">
+										<entry name="objectVersion" type="attribute" outkey="2"/>
+										<entry name="uuid" type="attribute" outkey="4"/>
+										<entry name="existenceKind" type="attribute" outkey="230"/>
+										<entry name="Aliases" ns="1" outkey="5">
+											<entry name="authority" type="attribute" outkey="6"/>
+											<entry name="Identifier" ns="1" outkey="7"/>
+											<entry name="Description" ns="1" outkey="8"/>
+										</entry>
+										<entry name="Citation" ns="1" outkey="9">
+											<entry name="Title" ns="1" outkey="10"/>
+											<entry name="Originator" ns="1" outkey="11"/>
+											<entry name="Creation" ns="1" outkey="12"/>
+											<entry name="Format" ns="1" outkey="13"/>
+											<entry name="Editor" ns="1" outkey="14"/>
+											<entry name="LastUpdate" ns="1" outkey="15"/>
+											<entry name="Description" ns="1" outkey="16"/>
+											<entry name="DescriptiveKeywords" ns="1" outkey="17"/>
+										</entry>
+										<entry name="CustomData" ns="1" outkey="18"/>
+										<entry name="ExtensionNameValue" ns="1" outkey="19"/>
+										<entry name="ChannelState" ns="2" outkey="20"/>
+										<entry name="RunNumber" ns="2" outkey="21"/>
+										<entry name="PassNumber" ns="2" outkey="22"/>
+										<entry name="LoggingCompanyName" ns="2" outkey="231"/>
+										<entry name="LoggingCompanyCode" ns="2" outkey="23"/>
+										<entry name="ToolClass" ns="2" outkey="232"/>
+										<entry name="Derivation" ns="2" outkey="24"/>
+										<entry name="LoggingMethod" ns="2" outkey="25"/>
+										<entry name="NominalHoleSize" ns="2" outkey="26"/>
+										<entry name="Wellbore" ns="2" outkey="27">
+											<entry name="Title" ns="1" outkey="28"/>
+											<entry name="Uuid" ns="1" outkey="29"/>
+										</entry>
+										<entry name="ChannelSet" ns="2" outkey="30" expanded="1">
+											<entry name="objectVersion" type="attribute" outkey="31"/>
+											<entry name="uuid" type="attribute" outkey="33"/>
+											<entry name="existenceKind" type="attribute" outkey="242"/>
+											<entry name="Aliases" ns="1" outkey="34">
+												<entry name="authority" type="attribute" outkey="35"/>
+												<entry name="Identifier" ns="1" outkey="36"/>
+												<entry name="Description" ns="1" outkey="37"/>
+											</entry>
+											<entry name="Citation" ns="1" outkey="38">
+												<entry name="Title" ns="1" outkey="39"/>
+												<entry name="Originator" ns="1" outkey="40"/>
+												<entry name="Creation" ns="1" outkey="41"/>
+												<entry name="Format" ns="1" outkey="42"/>
+												<entry name="Editor" ns="1" outkey="43"/>
+												<entry name="LastUpdate" ns="1" outkey="44"/>
+												<entry name="Description" ns="1" outkey="45"/>
+												<entry name="DescriptiveKeywords" ns="1" outkey="46"/>
+											</entry>
+											<entry name="CustomData" ns="1" outkey="47"/>
+											<entry name="ExtensionNameValue" ns="1" outkey="48"/>
+											<entry name="Index" ns="2" outkey="49">
+												<entry name="IndexType" ns="2" outkey="50"/>
+												<entry name="Uom" ns="2" outkey="51"/>
+												<entry name="Direction" ns="2" outkey="52"/>
+												<entry name="Mnemonic" ns="2" outkey="53"/>
+												<entry name="DatumReference" ns="2" outkey="54"/>
+											</entry>
+											<entry name="Channel" ns="2" outkey="55" expanded="1">
+												<entry name="objectVersion" type="attribute" outkey="56"/>
+												<entry name="uuid" type="attribute" outkey="58"/>
+												<entry name="existenceKind" type="attribute" outkey="243"/>
+												<entry name="Aliases" ns="1" outkey="59">
+													<entry name="authority" type="attribute" outkey="60"/>
+													<entry name="Identifier" ns="1" outkey="61"/>
+													<entry name="Description" ns="1" outkey="62"/>
+												</entry>
+												<entry name="Citation" ns="1" outkey="63">
+													<entry name="Title" ns="1" outkey="64"/>
+													<entry name="Originator" ns="1" outkey="65"/>
+													<entry name="Creation" ns="1" outkey="66"/>
+													<entry name="Format" ns="1" outkey="67"/>
+													<entry name="Editor" ns="1" outkey="68"/>
+													<entry name="LastUpdate" ns="1" outkey="69"/>
+													<entry name="Description" ns="1" outkey="70"/>
+													<entry name="DescriptiveKeywords" ns="1" outkey="71"/>
+												</entry>
+												<entry name="CustomData" ns="1" outkey="72"/>
+												<entry name="ExtensionNameValue" ns="1" outkey="73"/>
+												<entry name="Mnemonic" ns="2" outkey="74"/>
+												<entry name="DataType" ns="2" outkey="75"/>
+												<entry name="Uom" ns="2" outkey="76"/>
+												<entry name="Source" ns="2" outkey="77"/>
+												<entry name="Wellbore" ns="2" outkey="78">
+													<entry name="Title" ns="1" outkey="79"/>
+													<entry name="Uuid" ns="1" outkey="80"/>
+												</entry>
+												<entry name="AxisDefinition" ns="2" outkey="81"/>
+												<entry name="ChannelState" ns="2" outkey="82"/>
+												<entry name="RunNumber" ns="2" outkey="83"/>
+												<entry name="PassNumber" ns="2" outkey="84"/>
+												<entry name="LoggingCompanyName" ns="2" outkey="244"/>
+												<entry name="LoggingCompanyCode" ns="2" outkey="85"/>
+												<entry name="Derivation" ns="2" outkey="86"/>
+												<entry name="LoggingMethod" ns="2" outkey="87"/>
+												<entry name="NominalHoleSize" ns="2" outkey="88"/>
+												<entry name="PointMetadata" ns="2" outkey="89">
+													<entry name="Name" ns="2" outkey="90"/>
+													<entry name="Description" ns="2" outkey="91"/>
+												</entry>
+												<entry name="DerivedFrom" ns="2" outkey="92">
+													<entry name="Title" ns="1" outkey="93"/>
+													<entry name="Uuid" ns="1" outkey="94"/>
+												</entry>
+												<entry name="Index" ns="2" outkey="95" expanded="1">
+													<entry name="IndexType" ns="2" outkey="256"/>
+													<entry name="Uom" ns="2" outkey="96"/>
+													<entry name="Direction" ns="2" outkey="97"/>
+													<entry name="Mnemonic" ns="2" outkey="98"/>
+												</entry>
+											</entry>
+											<entry name="Data" ns="2" outkey="99"/>
+											<entry name="ChannelState" ns="2" outkey="100"/>
+											<entry name="RunNumber" ns="2" outkey="101"/>
+											<entry name="PassNumber" ns="2" outkey="102"/>
+											<entry name="LoggingCompanyCode" ns="2" outkey="103"/>
+											<entry name="Derivation" ns="2" outkey="104"/>
+											<entry name="LoggingMethod" ns="2" outkey="105"/>
+											<entry name="NominalHoleSize" ns="2" outkey="106"/>
+											<entry name="Wellbore" ns="2" outkey="107">
+												<entry name="Title" ns="1" outkey="108"/>
+												<entry name="Uuid" ns="1" outkey="109"/>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\Energistics\energyml\data\witsml\v2.0\xsd_schemas\Log.xsd" instanceroot="{http://www.energistics.org/energyml/data/witsmlv2}Log" inputinstance="..\Energistics\energyml\data\witsml\v2.0\xml_examples\Log.xml" outputinstance="..\WITSML\energyml\data\witsml\v2.0\xml_examples\Log.xml"/>
+					</data>
+				</component>
 				<component name="Log" library="xml" uid="2" kind="14">
-					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1" EnableMinMaxOccursOptimizations="0"/>
 					<view ltx="1072" lty="-39" rbx="2053" rby="918"/>
 					<data>
 						<root scrollposition="687">
@@ -253,157 +403,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\energyml\2.1\data\witsml\v2.1\xsd_schemas\Log.xsd" instanceroot="{http://www.energistics.org/energyml/data/witsmlv2}Log" outputinstance="..\Standards\energyML_202205\energyml\data\witsml\v2.1\xsd_schemas\Log.xml"/>
-					</data>
-				</component>
-				<component name="Log" library="xml" uid="3" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
-					<view ltx="-80" lty="-7" rbx="541" rby="943"/>
-					<data>
-						<root scrollposition="286">
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="http://www.energistics.org/energyml/data/commonv2"/>
-									<namespace uid="http://www.energistics.org/energyml/data/witsmlv2"/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="FileInstance" ns="3" expanded="1">
-								<entry name="document" ns="3" expanded="1" casttotargettypemode="cast-in-subtree">
-									<entry name="Log" ns="2" outkey="1" expanded="1">
-										<entry name="objectVersion" type="attribute" outkey="2"/>
-										<entry name="uuid" type="attribute" outkey="4"/>
-										<entry name="existenceKind" type="attribute" outkey="230"/>
-										<entry name="Aliases" ns="1" outkey="5">
-											<entry name="authority" type="attribute" outkey="6"/>
-											<entry name="Identifier" ns="1" outkey="7"/>
-											<entry name="Description" ns="1" outkey="8"/>
-										</entry>
-										<entry name="Citation" ns="1" outkey="9">
-											<entry name="Title" ns="1" outkey="10"/>
-											<entry name="Originator" ns="1" outkey="11"/>
-											<entry name="Creation" ns="1" outkey="12"/>
-											<entry name="Format" ns="1" outkey="13"/>
-											<entry name="Editor" ns="1" outkey="14"/>
-											<entry name="LastUpdate" ns="1" outkey="15"/>
-											<entry name="Description" ns="1" outkey="16"/>
-											<entry name="DescriptiveKeywords" ns="1" outkey="17"/>
-										</entry>
-										<entry name="CustomData" ns="1" outkey="18"/>
-										<entry name="ExtensionNameValue" ns="1" outkey="19"/>
-										<entry name="ChannelState" ns="2" outkey="20"/>
-										<entry name="RunNumber" ns="2" outkey="21"/>
-										<entry name="PassNumber" ns="2" outkey="22"/>
-										<entry name="LoggingCompanyName" ns="2" outkey="231"/>
-										<entry name="LoggingCompanyCode" ns="2" outkey="23"/>
-										<entry name="ToolClass" ns="2" outkey="232"/>
-										<entry name="Derivation" ns="2" outkey="24"/>
-										<entry name="LoggingMethod" ns="2" outkey="25"/>
-										<entry name="NominalHoleSize" ns="2" outkey="26"/>
-										<entry name="Wellbore" ns="2" outkey="27">
-											<entry name="Title" ns="1" outkey="28"/>
-											<entry name="Uuid" ns="1" outkey="29"/>
-										</entry>
-										<entry name="ChannelSet" ns="2" outkey="30" expanded="1">
-											<entry name="objectVersion" type="attribute" outkey="31"/>
-											<entry name="uuid" type="attribute" outkey="33"/>
-											<entry name="existenceKind" type="attribute" outkey="242"/>
-											<entry name="Aliases" ns="1" outkey="34">
-												<entry name="authority" type="attribute" outkey="35"/>
-												<entry name="Identifier" ns="1" outkey="36"/>
-												<entry name="Description" ns="1" outkey="37"/>
-											</entry>
-											<entry name="Citation" ns="1" outkey="38">
-												<entry name="Title" ns="1" outkey="39"/>
-												<entry name="Originator" ns="1" outkey="40"/>
-												<entry name="Creation" ns="1" outkey="41"/>
-												<entry name="Format" ns="1" outkey="42"/>
-												<entry name="Editor" ns="1" outkey="43"/>
-												<entry name="LastUpdate" ns="1" outkey="44"/>
-												<entry name="Description" ns="1" outkey="45"/>
-												<entry name="DescriptiveKeywords" ns="1" outkey="46"/>
-											</entry>
-											<entry name="CustomData" ns="1" outkey="47"/>
-											<entry name="ExtensionNameValue" ns="1" outkey="48"/>
-											<entry name="Index" ns="2" outkey="49">
-												<entry name="IndexType" ns="2" outkey="50"/>
-												<entry name="Uom" ns="2" outkey="51"/>
-												<entry name="Direction" ns="2" outkey="52"/>
-												<entry name="Mnemonic" ns="2" outkey="53"/>
-												<entry name="DatumReference" ns="2" outkey="54"/>
-											</entry>
-											<entry name="Channel" ns="2" outkey="55" expanded="1">
-												<entry name="objectVersion" type="attribute" outkey="56"/>
-												<entry name="uuid" type="attribute" outkey="58"/>
-												<entry name="existenceKind" type="attribute" outkey="243"/>
-												<entry name="Aliases" ns="1" outkey="59">
-													<entry name="authority" type="attribute" outkey="60"/>
-													<entry name="Identifier" ns="1" outkey="61"/>
-													<entry name="Description" ns="1" outkey="62"/>
-												</entry>
-												<entry name="Citation" ns="1" outkey="63">
-													<entry name="Title" ns="1" outkey="64"/>
-													<entry name="Originator" ns="1" outkey="65"/>
-													<entry name="Creation" ns="1" outkey="66"/>
-													<entry name="Format" ns="1" outkey="67"/>
-													<entry name="Editor" ns="1" outkey="68"/>
-													<entry name="LastUpdate" ns="1" outkey="69"/>
-													<entry name="Description" ns="1" outkey="70"/>
-													<entry name="DescriptiveKeywords" ns="1" outkey="71"/>
-												</entry>
-												<entry name="CustomData" ns="1" outkey="72"/>
-												<entry name="ExtensionNameValue" ns="1" outkey="73"/>
-												<entry name="Mnemonic" ns="2" outkey="74"/>
-												<entry name="DataType" ns="2" outkey="75"/>
-												<entry name="Uom" ns="2" outkey="76"/>
-												<entry name="Source" ns="2" outkey="77"/>
-												<entry name="Wellbore" ns="2" outkey="78">
-													<entry name="Title" ns="1" outkey="79"/>
-													<entry name="Uuid" ns="1" outkey="80"/>
-												</entry>
-												<entry name="AxisDefinition" ns="2" outkey="81"/>
-												<entry name="ChannelState" ns="2" outkey="82"/>
-												<entry name="RunNumber" ns="2" outkey="83"/>
-												<entry name="PassNumber" ns="2" outkey="84"/>
-												<entry name="LoggingCompanyName" ns="2" outkey="244"/>
-												<entry name="LoggingCompanyCode" ns="2" outkey="85"/>
-												<entry name="Derivation" ns="2" outkey="86"/>
-												<entry name="LoggingMethod" ns="2" outkey="87"/>
-												<entry name="NominalHoleSize" ns="2" outkey="88"/>
-												<entry name="PointMetadata" ns="2" outkey="89">
-													<entry name="Name" ns="2" outkey="90"/>
-													<entry name="Description" ns="2" outkey="91"/>
-												</entry>
-												<entry name="DerivedFrom" ns="2" outkey="92">
-													<entry name="Title" ns="1" outkey="93"/>
-													<entry name="Uuid" ns="1" outkey="94"/>
-												</entry>
-												<entry name="Index" ns="2" outkey="95" expanded="1">
-													<entry name="IndexType" ns="2" outkey="256"/>
-													<entry name="Uom" ns="2" outkey="96"/>
-													<entry name="Direction" ns="2" outkey="97"/>
-													<entry name="Mnemonic" ns="2" outkey="98"/>
-												</entry>
-											</entry>
-											<entry name="Data" ns="2" outkey="99"/>
-											<entry name="ChannelState" ns="2" outkey="100"/>
-											<entry name="RunNumber" ns="2" outkey="101"/>
-											<entry name="PassNumber" ns="2" outkey="102"/>
-											<entry name="LoggingCompanyCode" ns="2" outkey="103"/>
-											<entry name="Derivation" ns="2" outkey="104"/>
-											<entry name="LoggingMethod" ns="2" outkey="105"/>
-											<entry name="NominalHoleSize" ns="2" outkey="106"/>
-											<entry name="Wellbore" ns="2" outkey="107">
-												<entry name="Title" ns="1" outkey="108"/>
-												<entry name="Uuid" ns="1" outkey="109"/>
-											</entry>
-										</entry>
-									</entry>
-								</entry>
-							</entry>
-						</root>
-						<document schema="..\..\energyml\2.0\data\witsml\v2.0\xsd_schemas\Log.xsd" instanceroot="{http://www.energistics.org/energyml/data/witsmlv2}Log" inputinstance="..\..\energyml\2.0\data\witsml\v2.0\xml_examples\Log.xml" outputinstance="..\WITSML\energyml\data\witsml\v2.0\xml_examples\Log.xml"/>
+						<document schema="..\Energistics\energyml\data\witsml\v2.1\xsd_schemas\Log.xsd" instanceroot="{http://www.energistics.org/energyml/data/witsmlv2}Log" outputinstance="..\Standards\energyML_202205\energyml\data\witsml\v2.1\xsd_schemas\Log.xml"/>
 					</data>
 				</component>
 			</children>

@@ -150,7 +150,7 @@
 					</data>
 				</component>
 				<component name="Well" library="xml" uid="3" kind="14">
-					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1" EnableMinMaxOccursOptimizations="0"/>
 					<view ltx="1007" rbx="1316" rby="582"/>
 					<data>
 						<root scrollposition="4626">
@@ -263,7 +263,7 @@
 					</data>
 				</component>
 				<component name="Well" library="xml" uid="2" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
+					<properties XSLTTargetEncoding="UTF-8" EnableMinMaxOccursOptimizations="0"/>
 					<view rbx="303" rby="582"/>
 					<data>
 						<root scrollposition="2412">

@@ -82,7 +82,7 @@
 					<view ltx="609" lty="311" rbx="707" rby="365"/>
 				</component>
 				<component name="Log" library="xml" uid="2" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
+					<properties XSLTTargetEncoding="UTF-8" EnableMinMaxOccursOptimizations="0"/>
 					<view ltx="-80" lty="-39" rbx="334" rby="901"/>
 					<data>
 						<root scrollposition="1">
@@ -231,11 +231,11 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\energyml\2.1\data\witsml\v2.1\xsd_schemas\Log.xsd" instanceroot="{http://www.energistics.org/energyml/data/witsmlv2}Log"/>
+						<document schema="..\Energistics\energyml\data\witsml\v2.1\xsd_schemas\Log.xsd" instanceroot="{http://www.energistics.org/energyml/data/witsmlv2}Log"/>
 					</data>
 				</component>
 				<component name="Log" library="xml" uid="3" kind="14">
-					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<properties XSLTTargetEncoding="UTF-8" EnableMinMaxOccursOptimizations="0" XSLTDefaultOutput="1"/>
 					<view ltx="987" lty="-36" rbx="1323" rby="901"/>
 					<data>
 						<root scrollposition="1">
@@ -389,7 +389,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\..\energyml\2.0\data\witsml\v2.0\xsd_schemas\Log.xsd" instanceroot="{http://www.energistics.org/energyml/data/witsmlv2}Log" inputinstance="..\..\energyml\2.0\data\witsml\v2.0\xml_examples\Log.xml"/>
+						<document schema="..\Energistics\energyml\data\witsml\v2.0\xsd_schemas\Log.xsd" instanceroot="{http://www.energistics.org/energyml/data/witsmlv2}Log" inputinstance="..\Energistics\energyml\data\witsml\v2.0\xml_examples\Log.xml"/>
 					</data>
 				</component>
 			</children>

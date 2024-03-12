@@ -171,31 +171,33 @@ namespace Map20To21
 				private int pos = 0;
 				private readonly seq1_join closure;
 				private IEnumerator var2_Rig;
-				private IEnumerator var4_Rig;
-				private IEnumerator var3_objectVersion;
-				private IEnumerator var5_Aliases;
-				private IEnumerator var6_existenceKind;
-				private IEnumerator var7_CustomData;
-				private IEnumerator var8_ExtensionNameValue;
-				private IEnumerator var9_Owner;
-				private IEnumerator var10_TypeRig;
-				private IEnumerator var11_Manufacturer;
-				private IEnumerator var12_YearEntService;
-				private IEnumerator var13_ClassRig;
-				private IEnumerator var14_Approvals;
-				private IEnumerator var15_Registration;
-				private IEnumerator var16_TelNumber;
-				private IEnumerator var17_FaxNumber;
-				private IEnumerator var18_EmailAddress;
-				private IEnumerator var19_NameContact;
-				private IEnumerator var20_RatingDrillDepth;
-				private IEnumerator var21_RatingWaterDepth;
-				private IEnumerator var22_IsOffshore;
-				private IEnumerator var23_TypeDerrick;
-				private IEnumerator var24_RatingDerrick;
-				private IEnumerator var25_HtDerrick;
-				private IEnumerator var26_CapWindDerrick;
-				private IEnumerator var27_NumCranes;
+				private IEnumerator var3_uuid;
+				private IEnumerator var5_Rig;
+				private IEnumerator var6_Aliases;
+				private IEnumerator var4_objectVersion;
+				private IEnumerator var7_Citation;
+				private IEnumerator var8_existenceKind;
+				private IEnumerator var9_CustomData;
+				private IEnumerator var10_ExtensionNameValue;
+				private IEnumerator var11_Owner;
+				private IEnumerator var12_TypeRig;
+				private IEnumerator var13_Manufacturer;
+				private IEnumerator var14_YearEntService;
+				private IEnumerator var15_ClassRig;
+				private IEnumerator var16_Approvals;
+				private IEnumerator var17_Registration;
+				private IEnumerator var18_TelNumber;
+				private IEnumerator var19_FaxNumber;
+				private IEnumerator var20_EmailAddress;
+				private IEnumerator var21_NameContact;
+				private IEnumerator var22_RatingDrillDepth;
+				private IEnumerator var23_RatingWaterDepth;
+				private IEnumerator var24_IsOffshore;
+				private IEnumerator var25_TypeDerrick;
+				private IEnumerator var26_RatingDerrick;
+				private IEnumerator var27_HtDerrick;
+				private IEnumerator var28_CapWindDerrick;
+				private IEnumerator var29_NumCranes;
 				public Enumerator(seq1_join closure) 
 				{
 					this.closure = closure;
@@ -218,7 +220,7 @@ namespace Map20To21
 							return true;
 						case 2:
 							state = 3;
-							current = Altova.Functions.Core.CreateAttribute(Altova.Functions.Core.CreateQName("xsi:schemaLocation", "http://www.w3.org/2001/XMLSchema-instance"), Altova.Functions.Core.Box("http://www.energistics.org/energyml/data/witsmlv2 file:///C:/Projects/Energistics/Standards/energyML_202205/energyml/data/witsml/v2.1/xsd_schemas/Rig.xsd"));
+							current = Altova.Functions.Core.CreateAttribute(Altova.Functions.Core.CreateQName("xsi:schemaLocation", "http://www.w3.org/2001/XMLSchema-instance"), Altova.Functions.Core.Box("http://www.energistics.org/energyml/data/witsmlv2 file:///D:/Repos/witsml-converter/Mappings/Energistics/energyml/data/witsml/v2.1/xsd_schemas/Rig.xsd"));
 							pos++;
 							return true;
 						case 3:
@@ -228,299 +230,311 @@ namespace Map20To21
 						case 4:
 							state = 6;
 							if (!var2_Rig.MoveNext()) { state = 5; goto case 5; }
-							current = Altova.Functions.Core.CreateAttribute(Altova.Functions.Core.CreateQName("uuid", ""), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)Altova.Functions.Core.First(Altova.Functions.Core.FilterAttributes(Altova.Functions.Core.CreateQName("uuid", ""), (Altova.Mapforce.IMFNode)(var2_Rig.Current))))));
-							pos++;
-							return true;
+							var3_uuid = (Altova.Functions.Core.FilterAttributes(Altova.Functions.Core.CreateQName("uuid", ""), (Altova.Mapforce.IMFNode)(var2_Rig.Current))).GetEnumerator();
+							goto case 6;
 						case 5:
-							state = 11;
+							state = 13;
 							Altova.Mapforce.MFEnumerator.Dispose(var2_Rig); var2_Rig = null;
-							var4_Rig = (closure.var1_Rig).GetEnumerator();
-							goto case 11;
+							var5_Rig = (closure.var1_Rig).GetEnumerator();
+							goto case 13;
 						case 6:
-							state = 7;
-							current = Altova.Functions.Core.CreateAttribute(Altova.Functions.Core.CreateQName("schemaVersion", ""), Altova.Functions.Core.Box("2.1"));
+							state = 6;
+							if (!var3_uuid.MoveNext()) { state = 7; goto case 7; }
+							current = Altova.Functions.Core.CreateAttribute(Altova.Functions.Core.CreateQName("uuid", ""), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var3_uuid.Current))));
 							pos++;
 							return true;
 						case 7:
-							state = 8;
-							var3_objectVersion = (Altova.Functions.Core.FilterAttributes(Altova.Functions.Core.CreateQName("objectVersion", ""), (Altova.Mapforce.IMFNode)(var2_Rig.Current))).GetEnumerator();
-							goto case 8;
-						case 8:
-							state = 8;
-							if (!var3_objectVersion.MoveNext()) { state = 9; goto case 9; }
-							current = Altova.Functions.Core.CreateAttribute(Altova.Functions.Core.CreateQName("objectVersion", ""), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var3_objectVersion.Current))));
+							state = 9;
+							Altova.Mapforce.MFEnumerator.Dispose(var3_uuid); var3_uuid = null;
+							current = Altova.Functions.Core.CreateAttribute(Altova.Functions.Core.CreateQName("schemaVersion", ""), Altova.Functions.Core.Box("2.1"));
 							pos++;
 							return true;
 						case 9:
-							state = 4;
-							Altova.Mapforce.MFEnumerator.Dispose(var3_objectVersion); var3_objectVersion = null;
-							goto case 4;
-						case 11:
-							state = 13;
-							if (!var4_Rig.MoveNext()) { state = 12; goto case 12; }
-							var5_Aliases = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("Aliases", "http://www.energistics.org/energyml/data/commonv2"), (Altova.Mapforce.IMFNode)(var4_Rig.Current))).GetEnumerator();
-							goto case 13;
-						case 12:
-							state = 0;
-							Altova.Mapforce.MFEnumerator.Dispose(var4_Rig); var4_Rig = null;
-							return false;
-						case 13:
-							state = 13;
-							if (!var5_Aliases.MoveNext()) { state = 14; goto case 14; }
-							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("eml:Aliases", "http://www.energistics.org/energyml/data/commonv2"), (new seq2_join((Altova.Mapforce.IMFNode)(var5_Aliases.Current))));
+							state = 10;
+							var4_objectVersion = (Altova.Functions.Core.FilterAttributes(Altova.Functions.Core.CreateQName("objectVersion", ""), (Altova.Mapforce.IMFNode)(var2_Rig.Current))).GetEnumerator();
+							goto case 10;
+						case 10:
+							state = 10;
+							if (!var4_objectVersion.MoveNext()) { state = 11; goto case 11; }
+							current = Altova.Functions.Core.CreateAttribute(Altova.Functions.Core.CreateQName("objectVersion", ""), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var4_objectVersion.Current))));
 							pos++;
 							return true;
+						case 11:
+							state = 4;
+							Altova.Mapforce.MFEnumerator.Dispose(var4_objectVersion); var4_objectVersion = null;
+							goto case 4;
+						case 13:
+							state = 15;
+							if (!var5_Rig.MoveNext()) { state = 14; goto case 14; }
+							var6_Aliases = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("Aliases", "http://www.energistics.org/energyml/data/commonv2"), (Altova.Mapforce.IMFNode)(var5_Rig.Current))).GetEnumerator();
+							goto case 15;
 						case 14:
-							state = 16;
-							Altova.Mapforce.MFEnumerator.Dispose(var5_Aliases); var5_Aliases = null;
-							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("eml:Citation", "http://www.energistics.org/energyml/data/commonv2"), (new seq3_join((Altova.Mapforce.IMFNode)(var4_Rig.Current))));
+							state = 0;
+							Altova.Mapforce.MFEnumerator.Dispose(var5_Rig); var5_Rig = null;
+							return false;
+						case 15:
+							state = 15;
+							if (!var6_Aliases.MoveNext()) { state = 16; goto case 16; }
+							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("eml:Aliases", "http://www.energistics.org/energyml/data/commonv2"), (new seq2_join((Altova.Mapforce.IMFNode)(var6_Aliases.Current))));
 							pos++;
 							return true;
 						case 16:
-							state = 17;
-							var6_existenceKind = (Altova.Functions.Core.FilterAttributes(Altova.Functions.Core.CreateQName("existenceKind", ""), (Altova.Mapforce.IMFNode)(var4_Rig.Current))).GetEnumerator();
-							goto case 17;
-						case 17:
-							state = 17;
-							if (!var6_existenceKind.MoveNext()) { state = 18; goto case 18; }
-							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("eml:Existence", "http://www.energistics.org/energyml/data/commonv2"), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var6_existenceKind.Current))));
+							state = 18;
+							Altova.Mapforce.MFEnumerator.Dispose(var6_Aliases); var6_Aliases = null;
+							var7_Citation = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("Citation", "http://www.energistics.org/energyml/data/commonv2"), (Altova.Mapforce.IMFNode)(var5_Rig.Current))).GetEnumerator();
+							goto case 18;
+						case 18:
+							state = 18;
+							if (!var7_Citation.MoveNext()) { state = 19; goto case 19; }
+							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("eml:Citation", "http://www.energistics.org/energyml/data/commonv2"), (new seq3_join((Altova.Mapforce.IMFNode)(var7_Citation.Current))));
 							pos++;
 							return true;
-						case 18:
-							state = 20;
-							Altova.Mapforce.MFEnumerator.Dispose(var6_existenceKind); var6_existenceKind = null;
-							var7_CustomData = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("CustomData", "http://www.energistics.org/energyml/data/commonv2"), (Altova.Mapforce.IMFNode)(var4_Rig.Current))).GetEnumerator();
-							goto case 20;
-						case 20:
-							state = 20;
-							if (!var7_CustomData.MoveNext()) { state = 21; goto case 21; }
+						case 19:
+							state = 21;
+							Altova.Mapforce.MFEnumerator.Dispose(var7_Citation); var7_Citation = null;
+							var8_existenceKind = (Altova.Functions.Core.FilterAttributes(Altova.Functions.Core.CreateQName("existenceKind", ""), (Altova.Mapforce.IMFNode)(var5_Rig.Current))).GetEnumerator();
+							goto case 21;
+						case 21:
+							state = 21;
+							if (!var8_existenceKind.MoveNext()) { state = 22; goto case 22; }
+							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("eml:Existence", "http://www.energistics.org/energyml/data/commonv2"), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var8_existenceKind.Current))));
+							pos++;
+							return true;
+						case 22:
+							state = 24;
+							Altova.Mapforce.MFEnumerator.Dispose(var8_existenceKind); var8_existenceKind = null;
+							var9_CustomData = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("CustomData", "http://www.energistics.org/energyml/data/commonv2"), (Altova.Mapforce.IMFNode)(var5_Rig.Current))).GetEnumerator();
+							goto case 24;
+						case 24:
+							state = 24;
+							if (!var9_CustomData.MoveNext()) { state = 25; goto case 25; }
 							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("eml:CustomData", "http://www.energistics.org/energyml/data/commonv2"), (new seq4_seq_()));
 							pos++;
 							return true;
-						case 21:
-							state = 23;
-							Altova.Mapforce.MFEnumerator.Dispose(var7_CustomData); var7_CustomData = null;
-							var8_ExtensionNameValue = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("ExtensionNameValue", "http://www.energistics.org/energyml/data/commonv2"), (Altova.Mapforce.IMFNode)(var4_Rig.Current))).GetEnumerator();
-							goto case 23;
-						case 23:
-							state = 23;
-							if (!var8_ExtensionNameValue.MoveNext()) { state = 24; goto case 24; }
-							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("eml:ExtensionNameValue", "http://www.energistics.org/energyml/data/commonv2"), (new seq5_join((Altova.Mapforce.IMFNode)(var8_ExtensionNameValue.Current))));
-							pos++;
-							return true;
-						case 24:
-							state = 26;
-							Altova.Mapforce.MFEnumerator.Dispose(var8_ExtensionNameValue); var8_ExtensionNameValue = null;
-							var9_Owner = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("Owner", "http://www.energistics.org/energyml/data/witsmlv2"), (Altova.Mapforce.IMFNode)(var4_Rig.Current))).GetEnumerator();
-							goto case 26;
-						case 26:
-							state = 26;
-							if (!var9_Owner.MoveNext()) { state = 27; goto case 27; }
-							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("Owner", "http://www.energistics.org/energyml/data/witsmlv2"), (new seq7_seq_((Altova.Mapforce.IMFNode)(var9_Owner.Current))));
-							pos++;
-							return true;
+						case 25:
+							state = 27;
+							Altova.Mapforce.MFEnumerator.Dispose(var9_CustomData); var9_CustomData = null;
+							var10_ExtensionNameValue = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("ExtensionNameValue", "http://www.energistics.org/energyml/data/commonv2"), (Altova.Mapforce.IMFNode)(var5_Rig.Current))).GetEnumerator();
+							goto case 27;
 						case 27:
-							state = 29;
-							Altova.Mapforce.MFEnumerator.Dispose(var9_Owner); var9_Owner = null;
-							var10_TypeRig = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("TypeRig", "http://www.energistics.org/energyml/data/witsmlv2"), (Altova.Mapforce.IMFNode)(var4_Rig.Current))).GetEnumerator();
-							goto case 29;
-						case 29:
-							state = 29;
-							if (!var10_TypeRig.MoveNext()) { state = 30; goto case 30; }
-							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("TypeRig", "http://www.energistics.org/energyml/data/witsmlv2"), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var10_TypeRig.Current))));
+							state = 27;
+							if (!var10_ExtensionNameValue.MoveNext()) { state = 28; goto case 28; }
+							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("eml:ExtensionNameValue", "http://www.energistics.org/energyml/data/commonv2"), (new seq5_join((Altova.Mapforce.IMFNode)(var10_ExtensionNameValue.Current))));
 							pos++;
 							return true;
+						case 28:
+							state = 30;
+							Altova.Mapforce.MFEnumerator.Dispose(var10_ExtensionNameValue); var10_ExtensionNameValue = null;
+							var11_Owner = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("Owner", "http://www.energistics.org/energyml/data/witsmlv2"), (Altova.Mapforce.IMFNode)(var5_Rig.Current))).GetEnumerator();
+							goto case 30;
 						case 30:
-							state = 32;
-							Altova.Mapforce.MFEnumerator.Dispose(var10_TypeRig); var10_TypeRig = null;
-							var11_Manufacturer = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("Manufacturer", "http://www.energistics.org/energyml/data/witsmlv2"), (Altova.Mapforce.IMFNode)(var4_Rig.Current))).GetEnumerator();
-							goto case 32;
-						case 32:
-							state = 32;
-							if (!var11_Manufacturer.MoveNext()) { state = 33; goto case 33; }
-							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("Manufacturer", "http://www.energistics.org/energyml/data/witsmlv2"), (new seq7_seq_((Altova.Mapforce.IMFNode)(var11_Manufacturer.Current))));
+							state = 30;
+							if (!var11_Owner.MoveNext()) { state = 31; goto case 31; }
+							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("Owner", "http://www.energistics.org/energyml/data/witsmlv2"), (new seq7_seq_((Altova.Mapforce.IMFNode)(var11_Owner.Current))));
 							pos++;
 							return true;
+						case 31:
+							state = 33;
+							Altova.Mapforce.MFEnumerator.Dispose(var11_Owner); var11_Owner = null;
+							var12_TypeRig = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("TypeRig", "http://www.energistics.org/energyml/data/witsmlv2"), (Altova.Mapforce.IMFNode)(var5_Rig.Current))).GetEnumerator();
+							goto case 33;
 						case 33:
-							state = 35;
-							Altova.Mapforce.MFEnumerator.Dispose(var11_Manufacturer); var11_Manufacturer = null;
-							var12_YearEntService = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("YearEntService", "http://www.energistics.org/energyml/data/witsmlv2"), (Altova.Mapforce.IMFNode)(var4_Rig.Current))).GetEnumerator();
-							goto case 35;
-						case 35:
-							state = 35;
-							if (!var12_YearEntService.MoveNext()) { state = 36; goto case 36; }
-							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("YearEntService", "http://www.energistics.org/energyml/data/witsmlv2"), Altova.Functions.Core.Box(Altova.CoreTypes.GYearToString(Altova.CoreTypes.ParseGYear(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var12_YearEntService.Current))))));
+							state = 33;
+							if (!var12_TypeRig.MoveNext()) { state = 34; goto case 34; }
+							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("TypeRig", "http://www.energistics.org/energyml/data/witsmlv2"), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var12_TypeRig.Current))));
 							pos++;
 							return true;
+						case 34:
+							state = 36;
+							Altova.Mapforce.MFEnumerator.Dispose(var12_TypeRig); var12_TypeRig = null;
+							var13_Manufacturer = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("Manufacturer", "http://www.energistics.org/energyml/data/witsmlv2"), (Altova.Mapforce.IMFNode)(var5_Rig.Current))).GetEnumerator();
+							goto case 36;
 						case 36:
-							state = 38;
-							Altova.Mapforce.MFEnumerator.Dispose(var12_YearEntService); var12_YearEntService = null;
-							var13_ClassRig = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("ClassRig", "http://www.energistics.org/energyml/data/witsmlv2"), (Altova.Mapforce.IMFNode)(var4_Rig.Current))).GetEnumerator();
-							goto case 38;
-						case 38:
-							state = 38;
-							if (!var13_ClassRig.MoveNext()) { state = 39; goto case 39; }
-							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("ClassRig", "http://www.energistics.org/energyml/data/witsmlv2"), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var13_ClassRig.Current))));
+							state = 36;
+							if (!var13_Manufacturer.MoveNext()) { state = 37; goto case 37; }
+							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("Manufacturer", "http://www.energistics.org/energyml/data/witsmlv2"), (new seq7_seq_((Altova.Mapforce.IMFNode)(var13_Manufacturer.Current))));
 							pos++;
 							return true;
+						case 37:
+							state = 39;
+							Altova.Mapforce.MFEnumerator.Dispose(var13_Manufacturer); var13_Manufacturer = null;
+							var14_YearEntService = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("YearEntService", "http://www.energistics.org/energyml/data/witsmlv2"), (Altova.Mapforce.IMFNode)(var5_Rig.Current))).GetEnumerator();
+							goto case 39;
 						case 39:
-							state = 41;
-							Altova.Mapforce.MFEnumerator.Dispose(var13_ClassRig); var13_ClassRig = null;
-							var14_Approvals = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("Approvals", "http://www.energistics.org/energyml/data/witsmlv2"), (Altova.Mapforce.IMFNode)(var4_Rig.Current))).GetEnumerator();
-							goto case 41;
-						case 41:
-							state = 41;
-							if (!var14_Approvals.MoveNext()) { state = 42; goto case 42; }
-							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("Approvals", "http://www.energistics.org/energyml/data/witsmlv2"), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var14_Approvals.Current))));
+							state = 39;
+							if (!var14_YearEntService.MoveNext()) { state = 40; goto case 40; }
+							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("YearEntService", "http://www.energistics.org/energyml/data/witsmlv2"), Altova.Functions.Core.Box(Altova.CoreTypes.GYearToString(Altova.CoreTypes.ParseGYear(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var14_YearEntService.Current))))));
 							pos++;
 							return true;
+						case 40:
+							state = 42;
+							Altova.Mapforce.MFEnumerator.Dispose(var14_YearEntService); var14_YearEntService = null;
+							var15_ClassRig = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("ClassRig", "http://www.energistics.org/energyml/data/witsmlv2"), (Altova.Mapforce.IMFNode)(var5_Rig.Current))).GetEnumerator();
+							goto case 42;
 						case 42:
-							state = 44;
-							Altova.Mapforce.MFEnumerator.Dispose(var14_Approvals); var14_Approvals = null;
-							var15_Registration = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("Registration", "http://www.energistics.org/energyml/data/witsmlv2"), (Altova.Mapforce.IMFNode)(var4_Rig.Current))).GetEnumerator();
-							goto case 44;
-						case 44:
-							state = 44;
-							if (!var15_Registration.MoveNext()) { state = 45; goto case 45; }
-							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("Registration", "http://www.energistics.org/energyml/data/witsmlv2"), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var15_Registration.Current))));
+							state = 42;
+							if (!var15_ClassRig.MoveNext()) { state = 43; goto case 43; }
+							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("ClassRig", "http://www.energistics.org/energyml/data/witsmlv2"), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var15_ClassRig.Current))));
 							pos++;
 							return true;
+						case 43:
+							state = 45;
+							Altova.Mapforce.MFEnumerator.Dispose(var15_ClassRig); var15_ClassRig = null;
+							var16_Approvals = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("Approvals", "http://www.energistics.org/energyml/data/witsmlv2"), (Altova.Mapforce.IMFNode)(var5_Rig.Current))).GetEnumerator();
+							goto case 45;
 						case 45:
-							state = 47;
-							Altova.Mapforce.MFEnumerator.Dispose(var15_Registration); var15_Registration = null;
-							var16_TelNumber = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("TelNumber", "http://www.energistics.org/energyml/data/witsmlv2"), (Altova.Mapforce.IMFNode)(var4_Rig.Current))).GetEnumerator();
-							goto case 47;
-						case 47:
-							state = 47;
-							if (!var16_TelNumber.MoveNext()) { state = 48; goto case 48; }
-							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("TelNumber", "http://www.energistics.org/energyml/data/witsmlv2"), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var16_TelNumber.Current))));
+							state = 45;
+							if (!var16_Approvals.MoveNext()) { state = 46; goto case 46; }
+							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("Approvals", "http://www.energistics.org/energyml/data/witsmlv2"), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var16_Approvals.Current))));
 							pos++;
 							return true;
+						case 46:
+							state = 48;
+							Altova.Mapforce.MFEnumerator.Dispose(var16_Approvals); var16_Approvals = null;
+							var17_Registration = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("Registration", "http://www.energistics.org/energyml/data/witsmlv2"), (Altova.Mapforce.IMFNode)(var5_Rig.Current))).GetEnumerator();
+							goto case 48;
 						case 48:
-							state = 50;
-							Altova.Mapforce.MFEnumerator.Dispose(var16_TelNumber); var16_TelNumber = null;
-							var17_FaxNumber = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("FaxNumber", "http://www.energistics.org/energyml/data/witsmlv2"), (Altova.Mapforce.IMFNode)(var4_Rig.Current))).GetEnumerator();
-							goto case 50;
-						case 50:
-							state = 50;
-							if (!var17_FaxNumber.MoveNext()) { state = 51; goto case 51; }
-							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("FaxNumber", "http://www.energistics.org/energyml/data/witsmlv2"), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var17_FaxNumber.Current))));
+							state = 48;
+							if (!var17_Registration.MoveNext()) { state = 49; goto case 49; }
+							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("Registration", "http://www.energistics.org/energyml/data/witsmlv2"), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var17_Registration.Current))));
 							pos++;
 							return true;
+						case 49:
+							state = 51;
+							Altova.Mapforce.MFEnumerator.Dispose(var17_Registration); var17_Registration = null;
+							var18_TelNumber = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("TelNumber", "http://www.energistics.org/energyml/data/witsmlv2"), (Altova.Mapforce.IMFNode)(var5_Rig.Current))).GetEnumerator();
+							goto case 51;
 						case 51:
-							state = 53;
-							Altova.Mapforce.MFEnumerator.Dispose(var17_FaxNumber); var17_FaxNumber = null;
-							var18_EmailAddress = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("EmailAddress", "http://www.energistics.org/energyml/data/witsmlv2"), (Altova.Mapforce.IMFNode)(var4_Rig.Current))).GetEnumerator();
-							goto case 53;
-						case 53:
-							state = 53;
-							if (!var18_EmailAddress.MoveNext()) { state = 54; goto case 54; }
-							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("EmailAddress", "http://www.energistics.org/energyml/data/witsmlv2"), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var18_EmailAddress.Current))));
+							state = 51;
+							if (!var18_TelNumber.MoveNext()) { state = 52; goto case 52; }
+							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("TelNumber", "http://www.energistics.org/energyml/data/witsmlv2"), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var18_TelNumber.Current))));
 							pos++;
 							return true;
+						case 52:
+							state = 54;
+							Altova.Mapforce.MFEnumerator.Dispose(var18_TelNumber); var18_TelNumber = null;
+							var19_FaxNumber = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("FaxNumber", "http://www.energistics.org/energyml/data/witsmlv2"), (Altova.Mapforce.IMFNode)(var5_Rig.Current))).GetEnumerator();
+							goto case 54;
 						case 54:
-							state = 56;
-							Altova.Mapforce.MFEnumerator.Dispose(var18_EmailAddress); var18_EmailAddress = null;
-							var19_NameContact = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("NameContact", "http://www.energistics.org/energyml/data/witsmlv2"), (Altova.Mapforce.IMFNode)(var4_Rig.Current))).GetEnumerator();
-							goto case 56;
-						case 56:
-							state = 56;
-							if (!var19_NameContact.MoveNext()) { state = 57; goto case 57; }
-							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("NameContact", "http://www.energistics.org/energyml/data/witsmlv2"), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var19_NameContact.Current))));
+							state = 54;
+							if (!var19_FaxNumber.MoveNext()) { state = 55; goto case 55; }
+							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("FaxNumber", "http://www.energistics.org/energyml/data/witsmlv2"), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var19_FaxNumber.Current))));
 							pos++;
 							return true;
+						case 55:
+							state = 57;
+							Altova.Mapforce.MFEnumerator.Dispose(var19_FaxNumber); var19_FaxNumber = null;
+							var20_EmailAddress = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("EmailAddress", "http://www.energistics.org/energyml/data/witsmlv2"), (Altova.Mapforce.IMFNode)(var5_Rig.Current))).GetEnumerator();
+							goto case 57;
 						case 57:
-							state = 59;
-							Altova.Mapforce.MFEnumerator.Dispose(var19_NameContact); var19_NameContact = null;
-							var20_RatingDrillDepth = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("RatingDrillDepth", "http://www.energistics.org/energyml/data/witsmlv2"), (Altova.Mapforce.IMFNode)(var4_Rig.Current))).GetEnumerator();
-							goto case 59;
-						case 59:
-							state = 59;
-							if (!var20_RatingDrillDepth.MoveNext()) { state = 60; goto case 60; }
-							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("RatingDrillDepth", "http://www.energistics.org/energyml/data/witsmlv2"), (new seq8_seq_((Altova.Mapforce.IMFNode)(var20_RatingDrillDepth.Current))));
+							state = 57;
+							if (!var20_EmailAddress.MoveNext()) { state = 58; goto case 58; }
+							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("EmailAddress", "http://www.energistics.org/energyml/data/witsmlv2"), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var20_EmailAddress.Current))));
 							pos++;
 							return true;
+						case 58:
+							state = 60;
+							Altova.Mapforce.MFEnumerator.Dispose(var20_EmailAddress); var20_EmailAddress = null;
+							var21_NameContact = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("NameContact", "http://www.energistics.org/energyml/data/witsmlv2"), (Altova.Mapforce.IMFNode)(var5_Rig.Current))).GetEnumerator();
+							goto case 60;
 						case 60:
-							state = 62;
-							Altova.Mapforce.MFEnumerator.Dispose(var20_RatingDrillDepth); var20_RatingDrillDepth = null;
-							var21_RatingWaterDepth = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("RatingWaterDepth", "http://www.energistics.org/energyml/data/witsmlv2"), (Altova.Mapforce.IMFNode)(var4_Rig.Current))).GetEnumerator();
-							goto case 62;
-						case 62:
-							state = 62;
-							if (!var21_RatingWaterDepth.MoveNext()) { state = 63; goto case 63; }
-							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("RatingWaterDepth", "http://www.energistics.org/energyml/data/witsmlv2"), (new seq8_seq_((Altova.Mapforce.IMFNode)(var21_RatingWaterDepth.Current))));
+							state = 60;
+							if (!var21_NameContact.MoveNext()) { state = 61; goto case 61; }
+							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("NameContact", "http://www.energistics.org/energyml/data/witsmlv2"), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var21_NameContact.Current))));
 							pos++;
 							return true;
+						case 61:
+							state = 63;
+							Altova.Mapforce.MFEnumerator.Dispose(var21_NameContact); var21_NameContact = null;
+							var22_RatingDrillDepth = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("RatingDrillDepth", "http://www.energistics.org/energyml/data/witsmlv2"), (Altova.Mapforce.IMFNode)(var5_Rig.Current))).GetEnumerator();
+							goto case 63;
 						case 63:
-							state = 65;
-							Altova.Mapforce.MFEnumerator.Dispose(var21_RatingWaterDepth); var21_RatingWaterDepth = null;
-							var22_IsOffshore = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("IsOffshore", "http://www.energistics.org/energyml/data/witsmlv2"), (Altova.Mapforce.IMFNode)(var4_Rig.Current))).GetEnumerator();
-							goto case 65;
-						case 65:
-							state = 65;
-							if (!var22_IsOffshore.MoveNext()) { state = 66; goto case 66; }
-							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("IsOffshore", "http://www.energistics.org/energyml/data/witsmlv2"), Altova.Functions.Core.Box(Altova.CoreTypes.BooleanToString(Altova.CoreTypes.ParseBoolean(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var22_IsOffshore.Current))))));
+							state = 63;
+							if (!var22_RatingDrillDepth.MoveNext()) { state = 64; goto case 64; }
+							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("RatingDrillDepth", "http://www.energistics.org/energyml/data/witsmlv2"), (new seq8_join((Altova.Mapforce.IMFNode)(var22_RatingDrillDepth.Current))));
 							pos++;
 							return true;
+						case 64:
+							state = 66;
+							Altova.Mapforce.MFEnumerator.Dispose(var22_RatingDrillDepth); var22_RatingDrillDepth = null;
+							var23_RatingWaterDepth = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("RatingWaterDepth", "http://www.energistics.org/energyml/data/witsmlv2"), (Altova.Mapforce.IMFNode)(var5_Rig.Current))).GetEnumerator();
+							goto case 66;
 						case 66:
-							state = 68;
-							Altova.Mapforce.MFEnumerator.Dispose(var22_IsOffshore); var22_IsOffshore = null;
-							var23_TypeDerrick = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("TypeDerrick", "http://www.energistics.org/energyml/data/witsmlv2"), (Altova.Mapforce.IMFNode)(var4_Rig.Current))).GetEnumerator();
-							goto case 68;
-						case 68:
-							state = 68;
-							if (!var23_TypeDerrick.MoveNext()) { state = 69; goto case 69; }
-							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("TypeDerrick", "http://www.energistics.org/energyml/data/witsmlv2"), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var23_TypeDerrick.Current))));
+							state = 66;
+							if (!var23_RatingWaterDepth.MoveNext()) { state = 67; goto case 67; }
+							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("RatingWaterDepth", "http://www.energistics.org/energyml/data/witsmlv2"), (new seq8_join((Altova.Mapforce.IMFNode)(var23_RatingWaterDepth.Current))));
 							pos++;
 							return true;
+						case 67:
+							state = 69;
+							Altova.Mapforce.MFEnumerator.Dispose(var23_RatingWaterDepth); var23_RatingWaterDepth = null;
+							var24_IsOffshore = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("IsOffshore", "http://www.energistics.org/energyml/data/witsmlv2"), (Altova.Mapforce.IMFNode)(var5_Rig.Current))).GetEnumerator();
+							goto case 69;
 						case 69:
-							state = 71;
-							Altova.Mapforce.MFEnumerator.Dispose(var23_TypeDerrick); var23_TypeDerrick = null;
-							var24_RatingDerrick = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("RatingDerrick", "http://www.energistics.org/energyml/data/witsmlv2"), (Altova.Mapforce.IMFNode)(var4_Rig.Current))).GetEnumerator();
-							goto case 71;
-						case 71:
-							state = 71;
-							if (!var24_RatingDerrick.MoveNext()) { state = 72; goto case 72; }
-							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("RatingDerrick", "http://www.energistics.org/energyml/data/witsmlv2"), (new seq8_seq_((Altova.Mapforce.IMFNode)(var24_RatingDerrick.Current))));
+							state = 69;
+							if (!var24_IsOffshore.MoveNext()) { state = 70; goto case 70; }
+							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("IsOffshore", "http://www.energistics.org/energyml/data/witsmlv2"), Altova.Functions.Core.Box(Altova.CoreTypes.BooleanToString(Altova.CoreTypes.ParseBoolean(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var24_IsOffshore.Current))))));
 							pos++;
 							return true;
+						case 70:
+							state = 72;
+							Altova.Mapforce.MFEnumerator.Dispose(var24_IsOffshore); var24_IsOffshore = null;
+							var25_TypeDerrick = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("TypeDerrick", "http://www.energistics.org/energyml/data/witsmlv2"), (Altova.Mapforce.IMFNode)(var5_Rig.Current))).GetEnumerator();
+							goto case 72;
 						case 72:
-							state = 74;
-							Altova.Mapforce.MFEnumerator.Dispose(var24_RatingDerrick); var24_RatingDerrick = null;
-							var25_HtDerrick = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("HtDerrick", "http://www.energistics.org/energyml/data/witsmlv2"), (Altova.Mapforce.IMFNode)(var4_Rig.Current))).GetEnumerator();
-							goto case 74;
-						case 74:
-							state = 74;
-							if (!var25_HtDerrick.MoveNext()) { state = 75; goto case 75; }
-							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("HtDerrick", "http://www.energistics.org/energyml/data/witsmlv2"), (new seq8_seq_((Altova.Mapforce.IMFNode)(var25_HtDerrick.Current))));
+							state = 72;
+							if (!var25_TypeDerrick.MoveNext()) { state = 73; goto case 73; }
+							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("TypeDerrick", "http://www.energistics.org/energyml/data/witsmlv2"), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var25_TypeDerrick.Current))));
 							pos++;
 							return true;
+						case 73:
+							state = 75;
+							Altova.Mapforce.MFEnumerator.Dispose(var25_TypeDerrick); var25_TypeDerrick = null;
+							var26_RatingDerrick = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("RatingDerrick", "http://www.energistics.org/energyml/data/witsmlv2"), (Altova.Mapforce.IMFNode)(var5_Rig.Current))).GetEnumerator();
+							goto case 75;
 						case 75:
-							state = 77;
-							Altova.Mapforce.MFEnumerator.Dispose(var25_HtDerrick); var25_HtDerrick = null;
-							var26_CapWindDerrick = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("CapWindDerrick", "http://www.energistics.org/energyml/data/witsmlv2"), (Altova.Mapforce.IMFNode)(var4_Rig.Current))).GetEnumerator();
-							goto case 77;
-						case 77:
-							state = 77;
-							if (!var26_CapWindDerrick.MoveNext()) { state = 78; goto case 78; }
-							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("CapWindDerrick", "http://www.energistics.org/energyml/data/witsmlv2"), (new seq8_seq_((Altova.Mapforce.IMFNode)(var26_CapWindDerrick.Current))));
+							state = 75;
+							if (!var26_RatingDerrick.MoveNext()) { state = 76; goto case 76; }
+							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("RatingDerrick", "http://www.energistics.org/energyml/data/witsmlv2"), (new seq8_join((Altova.Mapforce.IMFNode)(var26_RatingDerrick.Current))));
 							pos++;
 							return true;
+						case 76:
+							state = 78;
+							Altova.Mapforce.MFEnumerator.Dispose(var26_RatingDerrick); var26_RatingDerrick = null;
+							var27_HtDerrick = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("HtDerrick", "http://www.energistics.org/energyml/data/witsmlv2"), (Altova.Mapforce.IMFNode)(var5_Rig.Current))).GetEnumerator();
+							goto case 78;
 						case 78:
-							state = 80;
-							Altova.Mapforce.MFEnumerator.Dispose(var26_CapWindDerrick); var26_CapWindDerrick = null;
-							var27_NumCranes = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("NumCranes", "http://www.energistics.org/energyml/data/witsmlv2"), (Altova.Mapforce.IMFNode)(var4_Rig.Current))).GetEnumerator();
-							goto case 80;
-						case 80:
-							state = 80;
-							if (!var27_NumCranes.MoveNext()) { state = 81; goto case 81; }
-							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("NumCranes", "http://www.energistics.org/energyml/data/witsmlv2"), Altova.Functions.Core.Box(Altova.CoreTypes.DecimalToString(Altova.CoreTypes.LongToDecimal(Altova.CoreTypes.IntToLong(Altova.CoreTypes.LongToInt(Altova.CoreTypes.DecimalToLong(Altova.CoreTypes.ParseDecimal(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var27_NumCranes.Current))))))))));
+							state = 78;
+							if (!var27_HtDerrick.MoveNext()) { state = 79; goto case 79; }
+							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("HtDerrick", "http://www.energistics.org/energyml/data/witsmlv2"), (new seq8_join((Altova.Mapforce.IMFNode)(var27_HtDerrick.Current))));
 							pos++;
 							return true;
+						case 79:
+							state = 81;
+							Altova.Mapforce.MFEnumerator.Dispose(var27_HtDerrick); var27_HtDerrick = null;
+							var28_CapWindDerrick = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("CapWindDerrick", "http://www.energistics.org/energyml/data/witsmlv2"), (Altova.Mapforce.IMFNode)(var5_Rig.Current))).GetEnumerator();
+							goto case 81;
 						case 81:
-							state = 11;
-							Altova.Mapforce.MFEnumerator.Dispose(var27_NumCranes); var27_NumCranes = null;
-							goto case 11;
+							state = 81;
+							if (!var28_CapWindDerrick.MoveNext()) { state = 82; goto case 82; }
+							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("CapWindDerrick", "http://www.energistics.org/energyml/data/witsmlv2"), (new seq8_join((Altova.Mapforce.IMFNode)(var28_CapWindDerrick.Current))));
+							pos++;
+							return true;
+						case 82:
+							state = 84;
+							Altova.Mapforce.MFEnumerator.Dispose(var28_CapWindDerrick); var28_CapWindDerrick = null;
+							var29_NumCranes = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("NumCranes", "http://www.energistics.org/energyml/data/witsmlv2"), (Altova.Mapforce.IMFNode)(var5_Rig.Current))).GetEnumerator();
+							goto case 84;
+						case 84:
+							state = 84;
+							if (!var29_NumCranes.MoveNext()) { state = 85; goto case 85; }
+							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("NumCranes", "http://www.energistics.org/energyml/data/witsmlv2"), Altova.Functions.Core.Box(Altova.CoreTypes.DecimalToString(Altova.CoreTypes.LongToDecimal(Altova.CoreTypes.IntToLong(Altova.CoreTypes.LongToInt(Altova.CoreTypes.DecimalToLong(Altova.CoreTypes.ParseDecimal(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var29_NumCranes.Current))))))))));
+							pos++;
+							return true;
+						case 85:
+							state = 13;
+							Altova.Mapforce.MFEnumerator.Dispose(var29_NumCranes); var29_NumCranes = null;
+							goto case 13;
 						}
 					}
 					return false;
@@ -528,32 +542,34 @@ namespace Map20To21
 
 				public void Dispose() 
 				{
-					Altova.Mapforce.MFEnumerator.Dispose(var3_objectVersion); var3_objectVersion = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var3_uuid); var3_uuid = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var4_objectVersion); var4_objectVersion = null;
 					Altova.Mapforce.MFEnumerator.Dispose(var2_Rig); var2_Rig = null;
-					Altova.Mapforce.MFEnumerator.Dispose(var5_Aliases); var5_Aliases = null;
-					Altova.Mapforce.MFEnumerator.Dispose(var6_existenceKind); var6_existenceKind = null;
-					Altova.Mapforce.MFEnumerator.Dispose(var7_CustomData); var7_CustomData = null;
-					Altova.Mapforce.MFEnumerator.Dispose(var8_ExtensionNameValue); var8_ExtensionNameValue = null;
-					Altova.Mapforce.MFEnumerator.Dispose(var9_Owner); var9_Owner = null;
-					Altova.Mapforce.MFEnumerator.Dispose(var10_TypeRig); var10_TypeRig = null;
-					Altova.Mapforce.MFEnumerator.Dispose(var11_Manufacturer); var11_Manufacturer = null;
-					Altova.Mapforce.MFEnumerator.Dispose(var12_YearEntService); var12_YearEntService = null;
-					Altova.Mapforce.MFEnumerator.Dispose(var13_ClassRig); var13_ClassRig = null;
-					Altova.Mapforce.MFEnumerator.Dispose(var14_Approvals); var14_Approvals = null;
-					Altova.Mapforce.MFEnumerator.Dispose(var15_Registration); var15_Registration = null;
-					Altova.Mapforce.MFEnumerator.Dispose(var16_TelNumber); var16_TelNumber = null;
-					Altova.Mapforce.MFEnumerator.Dispose(var17_FaxNumber); var17_FaxNumber = null;
-					Altova.Mapforce.MFEnumerator.Dispose(var18_EmailAddress); var18_EmailAddress = null;
-					Altova.Mapforce.MFEnumerator.Dispose(var19_NameContact); var19_NameContact = null;
-					Altova.Mapforce.MFEnumerator.Dispose(var20_RatingDrillDepth); var20_RatingDrillDepth = null;
-					Altova.Mapforce.MFEnumerator.Dispose(var21_RatingWaterDepth); var21_RatingWaterDepth = null;
-					Altova.Mapforce.MFEnumerator.Dispose(var22_IsOffshore); var22_IsOffshore = null;
-					Altova.Mapforce.MFEnumerator.Dispose(var23_TypeDerrick); var23_TypeDerrick = null;
-					Altova.Mapforce.MFEnumerator.Dispose(var24_RatingDerrick); var24_RatingDerrick = null;
-					Altova.Mapforce.MFEnumerator.Dispose(var25_HtDerrick); var25_HtDerrick = null;
-					Altova.Mapforce.MFEnumerator.Dispose(var26_CapWindDerrick); var26_CapWindDerrick = null;
-					Altova.Mapforce.MFEnumerator.Dispose(var27_NumCranes); var27_NumCranes = null;
-					Altova.Mapforce.MFEnumerator.Dispose(var4_Rig); var4_Rig = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var6_Aliases); var6_Aliases = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var7_Citation); var7_Citation = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var8_existenceKind); var8_existenceKind = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var9_CustomData); var9_CustomData = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var10_ExtensionNameValue); var10_ExtensionNameValue = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var11_Owner); var11_Owner = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var12_TypeRig); var12_TypeRig = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var13_Manufacturer); var13_Manufacturer = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var14_YearEntService); var14_YearEntService = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var15_ClassRig); var15_ClassRig = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var16_Approvals); var16_Approvals = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var17_Registration); var17_Registration = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var18_TelNumber); var18_TelNumber = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var19_FaxNumber); var19_FaxNumber = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var20_EmailAddress); var20_EmailAddress = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var21_NameContact); var21_NameContact = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var22_RatingDrillDepth); var22_RatingDrillDepth = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var23_RatingWaterDepth); var23_RatingWaterDepth = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var24_IsOffshore); var24_IsOffshore = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var25_TypeDerrick); var25_TypeDerrick = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var26_RatingDerrick); var26_RatingDerrick = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var27_HtDerrick); var27_HtDerrick = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var28_CapWindDerrick); var28_CapWindDerrick = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var29_NumCranes); var29_NumCranes = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var5_Rig); var5_Rig = null;
 				}
 			}
 		}
@@ -576,7 +592,9 @@ namespace Map20To21
 				private object current = null;
 				private int pos = 0;
 				private readonly seq2_join closure;
-				private IEnumerator var2_Description;
+				private IEnumerator var2_authority;
+				private IEnumerator var3_Identifier;
+				private IEnumerator var4_Description;
 				public Enumerator(seq2_join closure) 
 				{
 					this.closure = closure;
@@ -594,27 +612,39 @@ namespace Map20To21
 						{
 						case 1:
 							state = 2;
-							current = Altova.Functions.Core.CreateAttribute(Altova.Functions.Core.CreateQName("authority", ""), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)Altova.Functions.Core.First(Altova.Functions.Core.FilterAttributes(Altova.Functions.Core.CreateQName("authority", ""), closure.var1_cur)))));
-							pos++;
-							return true;
+							var2_authority = (Altova.Functions.Core.FilterAttributes(Altova.Functions.Core.CreateQName("authority", ""), closure.var1_cur)).GetEnumerator();
+							goto case 2;
 						case 2:
-							state = 3;
-							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("eml:Identifier", "http://www.energistics.org/energyml/data/commonv2"), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)Altova.Functions.Core.First(Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("Identifier", "http://www.energistics.org/energyml/data/commonv2"), closure.var1_cur)))));
+							state = 2;
+							if (!var2_authority.MoveNext()) { state = 3; goto case 3; }
+							current = Altova.Functions.Core.CreateAttribute(Altova.Functions.Core.CreateQName("authority", ""), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var2_authority.Current))));
 							pos++;
 							return true;
 						case 3:
-							state = 4;
-							var2_Description = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("Description", "http://www.energistics.org/energyml/data/commonv2"), closure.var1_cur)).GetEnumerator();
-							goto case 4;
-						case 4:
-							state = 4;
-							if (!var2_Description.MoveNext()) { state = 5; goto case 5; }
-							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("eml:Description", "http://www.energistics.org/energyml/data/commonv2"), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var2_Description.Current))));
+							state = 5;
+							Altova.Mapforce.MFEnumerator.Dispose(var2_authority); var2_authority = null;
+							var3_Identifier = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("Identifier", "http://www.energistics.org/energyml/data/commonv2"), closure.var1_cur)).GetEnumerator();
+							goto case 5;
+						case 5:
+							state = 5;
+							if (!var3_Identifier.MoveNext()) { state = 6; goto case 6; }
+							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("eml:Identifier", "http://www.energistics.org/energyml/data/commonv2"), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var3_Identifier.Current))));
 							pos++;
 							return true;
-						case 5:
+						case 6:
+							state = 8;
+							Altova.Mapforce.MFEnumerator.Dispose(var3_Identifier); var3_Identifier = null;
+							var4_Description = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("Description", "http://www.energistics.org/energyml/data/commonv2"), closure.var1_cur)).GetEnumerator();
+							goto case 8;
+						case 8:
+							state = 8;
+							if (!var4_Description.MoveNext()) { state = 9; goto case 9; }
+							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("eml:Description", "http://www.energistics.org/energyml/data/commonv2"), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var4_Description.Current))));
+							pos++;
+							return true;
+						case 9:
 							state = 0;
-							Altova.Mapforce.MFEnumerator.Dispose(var2_Description); var2_Description = null;
+							Altova.Mapforce.MFEnumerator.Dispose(var4_Description); var4_Description = null;
 							return false;
 						}
 					}
@@ -623,7 +653,9 @@ namespace Map20To21
 
 				public void Dispose() 
 				{
-					Altova.Mapforce.MFEnumerator.Dispose(var2_Description); var2_Description = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var2_authority); var2_authority = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var3_Identifier); var3_Identifier = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var4_Description); var4_Description = null;
 				}
 			}
 		}
@@ -646,11 +678,14 @@ namespace Map20To21
 				private object current = null;
 				private int pos = 0;
 				private readonly seq3_join closure;
-				private Altova.Mapforce.IMFNode var2_Citation;
-				private IEnumerator var3_Editor;
-				private IEnumerator var4_LastUpdate;
-				private IEnumerator var5_Description;
-				private IEnumerator var6_DescriptiveKeywords;
+				private IEnumerator var2_Title;
+				private IEnumerator var3_Originator;
+				private IEnumerator var4_Creation;
+				private IEnumerator var5_Format;
+				private IEnumerator var6_Editor;
+				private IEnumerator var7_LastUpdate;
+				private IEnumerator var8_Description;
+				private IEnumerator var9_DescriptiveKeywords;
 				public Enumerator(seq3_join closure) 
 				{
 					this.closure = closure;
@@ -668,71 +703,94 @@ namespace Map20To21
 						{
 						case 1:
 							state = 2;
-							var2_Citation = ((Altova.Mapforce.IMFNode)Altova.Functions.Core.First(Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("Citation", "http://www.energistics.org/energyml/data/commonv2"), closure.var1_cur)));
-							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("eml:Title", "http://www.energistics.org/energyml/data/commonv2"), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)Altova.Functions.Core.First(Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("Title", "http://www.energistics.org/energyml/data/commonv2"), var2_Citation)))));
-							pos++;
-							return true;
+							var2_Title = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("Title", "http://www.energistics.org/energyml/data/commonv2"), closure.var1_cur)).GetEnumerator();
+							goto case 2;
 						case 2:
-							state = 3;
-							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("eml:Originator", "http://www.energistics.org/energyml/data/commonv2"), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)Altova.Functions.Core.First(Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("Originator", "http://www.energistics.org/energyml/data/commonv2"), var2_Citation)))));
+							state = 2;
+							if (!var2_Title.MoveNext()) { state = 3; goto case 3; }
+							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("eml:Title", "http://www.energistics.org/energyml/data/commonv2"), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var2_Title.Current))));
 							pos++;
 							return true;
 						case 3:
-							state = 4;
-							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("eml:Creation", "http://www.energistics.org/energyml/data/commonv2"), Altova.Functions.Core.Box(Altova.CoreTypes.DateTimeToString(Altova.CoreTypes.ParseDateTime(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)Altova.Functions.Core.First(Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("Creation", "http://www.energistics.org/energyml/data/commonv2"), var2_Citation)))))));
-							pos++;
-							return true;
-						case 4:
 							state = 5;
-							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("eml:Format", "http://www.energistics.org/energyml/data/commonv2"), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)Altova.Functions.Core.First(Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("Format", "http://www.energistics.org/energyml/data/commonv2"), var2_Citation)))));
-							pos++;
-							return true;
+							Altova.Mapforce.MFEnumerator.Dispose(var2_Title); var2_Title = null;
+							var3_Originator = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("Originator", "http://www.energistics.org/energyml/data/commonv2"), closure.var1_cur)).GetEnumerator();
+							goto case 5;
 						case 5:
-							state = 6;
-							var3_Editor = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("Editor", "http://www.energistics.org/energyml/data/commonv2"), var2_Citation)).GetEnumerator();
-							goto case 6;
+							state = 5;
+							if (!var3_Originator.MoveNext()) { state = 6; goto case 6; }
+							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("eml:Originator", "http://www.energistics.org/energyml/data/commonv2"), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var3_Originator.Current))));
+							pos++;
+							return true;
 						case 6:
-							state = 6;
-							if (!var3_Editor.MoveNext()) { state = 7; goto case 7; }
-							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("eml:Editor", "http://www.energistics.org/energyml/data/commonv2"), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var3_Editor.Current))));
+							state = 8;
+							Altova.Mapforce.MFEnumerator.Dispose(var3_Originator); var3_Originator = null;
+							var4_Creation = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("Creation", "http://www.energistics.org/energyml/data/commonv2"), closure.var1_cur)).GetEnumerator();
+							goto case 8;
+						case 8:
+							state = 8;
+							if (!var4_Creation.MoveNext()) { state = 9; goto case 9; }
+							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("eml:Creation", "http://www.energistics.org/energyml/data/commonv2"), Altova.Functions.Core.Box(Altova.CoreTypes.DateTimeToString(Altova.CoreTypes.ParseDateTime(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var4_Creation.Current))))));
 							pos++;
 							return true;
-						case 7:
-							state = 9;
-							Altova.Mapforce.MFEnumerator.Dispose(var3_Editor); var3_Editor = null;
-							var4_LastUpdate = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("LastUpdate", "http://www.energistics.org/energyml/data/commonv2"), var2_Citation)).GetEnumerator();
-							goto case 9;
 						case 9:
-							state = 9;
-							if (!var4_LastUpdate.MoveNext()) { state = 10; goto case 10; }
-							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("eml:LastUpdate", "http://www.energistics.org/energyml/data/commonv2"), Altova.Functions.Core.Box(Altova.CoreTypes.DateTimeToString(Altova.CoreTypes.ParseDateTime(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var4_LastUpdate.Current))))));
+							state = 11;
+							Altova.Mapforce.MFEnumerator.Dispose(var4_Creation); var4_Creation = null;
+							var5_Format = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("Format", "http://www.energistics.org/energyml/data/commonv2"), closure.var1_cur)).GetEnumerator();
+							goto case 11;
+						case 11:
+							state = 11;
+							if (!var5_Format.MoveNext()) { state = 12; goto case 12; }
+							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("eml:Format", "http://www.energistics.org/energyml/data/commonv2"), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var5_Format.Current))));
 							pos++;
 							return true;
-						case 10:
-							state = 12;
-							Altova.Mapforce.MFEnumerator.Dispose(var4_LastUpdate); var4_LastUpdate = null;
-							var5_Description = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("Description", "http://www.energistics.org/energyml/data/commonv2"), var2_Citation)).GetEnumerator();
-							goto case 12;
 						case 12:
-							state = 12;
-							if (!var5_Description.MoveNext()) { state = 13; goto case 13; }
-							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("eml:Description", "http://www.energistics.org/energyml/data/commonv2"), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var5_Description.Current))));
+							state = 14;
+							Altova.Mapforce.MFEnumerator.Dispose(var5_Format); var5_Format = null;
+							var6_Editor = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("Editor", "http://www.energistics.org/energyml/data/commonv2"), closure.var1_cur)).GetEnumerator();
+							goto case 14;
+						case 14:
+							state = 14;
+							if (!var6_Editor.MoveNext()) { state = 15; goto case 15; }
+							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("eml:Editor", "http://www.energistics.org/energyml/data/commonv2"), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var6_Editor.Current))));
 							pos++;
 							return true;
-						case 13:
-							state = 15;
-							Altova.Mapforce.MFEnumerator.Dispose(var5_Description); var5_Description = null;
-							var6_DescriptiveKeywords = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("DescriptiveKeywords", "http://www.energistics.org/energyml/data/commonv2"), var2_Citation)).GetEnumerator();
-							goto case 15;
 						case 15:
-							state = 15;
-							if (!var6_DescriptiveKeywords.MoveNext()) { state = 16; goto case 16; }
-							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("eml:DescriptiveKeywords", "http://www.energistics.org/energyml/data/commonv2"), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var6_DescriptiveKeywords.Current))));
+							state = 17;
+							Altova.Mapforce.MFEnumerator.Dispose(var6_Editor); var6_Editor = null;
+							var7_LastUpdate = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("LastUpdate", "http://www.energistics.org/energyml/data/commonv2"), closure.var1_cur)).GetEnumerator();
+							goto case 17;
+						case 17:
+							state = 17;
+							if (!var7_LastUpdate.MoveNext()) { state = 18; goto case 18; }
+							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("eml:LastUpdate", "http://www.energistics.org/energyml/data/commonv2"), Altova.Functions.Core.Box(Altova.CoreTypes.DateTimeToString(Altova.CoreTypes.ParseDateTime(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var7_LastUpdate.Current))))));
 							pos++;
 							return true;
-						case 16:
+						case 18:
+							state = 20;
+							Altova.Mapforce.MFEnumerator.Dispose(var7_LastUpdate); var7_LastUpdate = null;
+							var8_Description = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("Description", "http://www.energistics.org/energyml/data/commonv2"), closure.var1_cur)).GetEnumerator();
+							goto case 20;
+						case 20:
+							state = 20;
+							if (!var8_Description.MoveNext()) { state = 21; goto case 21; }
+							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("eml:Description", "http://www.energistics.org/energyml/data/commonv2"), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var8_Description.Current))));
+							pos++;
+							return true;
+						case 21:
+							state = 23;
+							Altova.Mapforce.MFEnumerator.Dispose(var8_Description); var8_Description = null;
+							var9_DescriptiveKeywords = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("DescriptiveKeywords", "http://www.energistics.org/energyml/data/commonv2"), closure.var1_cur)).GetEnumerator();
+							goto case 23;
+						case 23:
+							state = 23;
+							if (!var9_DescriptiveKeywords.MoveNext()) { state = 24; goto case 24; }
+							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("eml:DescriptiveKeywords", "http://www.energistics.org/energyml/data/commonv2"), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var9_DescriptiveKeywords.Current))));
+							pos++;
+							return true;
+						case 24:
 							state = 0;
-							Altova.Mapforce.MFEnumerator.Dispose(var6_DescriptiveKeywords); var6_DescriptiveKeywords = null;
+							Altova.Mapforce.MFEnumerator.Dispose(var9_DescriptiveKeywords); var9_DescriptiveKeywords = null;
 							return false;
 						}
 					}
@@ -741,10 +799,14 @@ namespace Map20To21
 
 				public void Dispose() 
 				{
-					Altova.Mapforce.MFEnumerator.Dispose(var3_Editor); var3_Editor = null;
-					Altova.Mapforce.MFEnumerator.Dispose(var4_LastUpdate); var4_LastUpdate = null;
-					Altova.Mapforce.MFEnumerator.Dispose(var5_Description); var5_Description = null;
-					Altova.Mapforce.MFEnumerator.Dispose(var6_DescriptiveKeywords); var6_DescriptiveKeywords = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var2_Title); var2_Title = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var3_Originator); var3_Originator = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var4_Creation); var4_Creation = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var5_Format); var5_Format = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var6_Editor); var6_Editor = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var7_LastUpdate); var7_LastUpdate = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var8_Description); var8_Description = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var9_DescriptiveKeywords); var9_DescriptiveKeywords = null;
 				}
 			}
 		}
@@ -811,10 +873,12 @@ namespace Map20To21
 				private object current = null;
 				private int pos = 0;
 				private readonly seq5_join closure;
-				private IEnumerator var2_MeasureClass;
-				private IEnumerator var3_DTim;
-				private IEnumerator var4_Index;
-				private IEnumerator var5_Description;
+				private IEnumerator var2_Name;
+				private IEnumerator var3_Value;
+				private IEnumerator var4_MeasureClass;
+				private IEnumerator var5_DTim;
+				private IEnumerator var6_Index;
+				private IEnumerator var7_Description;
 				public Enumerator(seq5_join closure) 
 				{
 					this.closure = closure;
@@ -832,60 +896,72 @@ namespace Map20To21
 						{
 						case 1:
 							state = 2;
-							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("eml:Name", "http://www.energistics.org/energyml/data/commonv2"), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)Altova.Functions.Core.First(Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("Name", "http://www.energistics.org/energyml/data/commonv2"), closure.var1_cur)))));
-							pos++;
-							return true;
+							var2_Name = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("Name", "http://www.energistics.org/energyml/data/commonv2"), closure.var1_cur)).GetEnumerator();
+							goto case 2;
 						case 2:
-							state = 3;
-							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("eml:Value", "http://www.energistics.org/energyml/data/commonv2"), (new seq6_join(closure.var1_cur)));
+							state = 2;
+							if (!var2_Name.MoveNext()) { state = 3; goto case 3; }
+							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("eml:Name", "http://www.energistics.org/energyml/data/commonv2"), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var2_Name.Current))));
 							pos++;
 							return true;
 						case 3:
-							state = 4;
-							var2_MeasureClass = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("MeasureClass", "http://www.energistics.org/energyml/data/commonv2"), closure.var1_cur)).GetEnumerator();
-							goto case 4;
-						case 4:
-							state = 4;
-							if (!var2_MeasureClass.MoveNext()) { state = 5; goto case 5; }
-							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("eml:MeasureClass", "http://www.energistics.org/energyml/data/commonv2"), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var2_MeasureClass.Current))));
-							pos++;
-							return true;
+							state = 5;
+							Altova.Mapforce.MFEnumerator.Dispose(var2_Name); var2_Name = null;
+							var3_Value = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("Value", "http://www.energistics.org/energyml/data/commonv2"), closure.var1_cur)).GetEnumerator();
+							goto case 5;
 						case 5:
-							state = 7;
-							Altova.Mapforce.MFEnumerator.Dispose(var2_MeasureClass); var2_MeasureClass = null;
-							var3_DTim = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("DTim", "http://www.energistics.org/energyml/data/commonv2"), closure.var1_cur)).GetEnumerator();
-							goto case 7;
-						case 7:
-							state = 7;
-							if (!var3_DTim.MoveNext()) { state = 8; goto case 8; }
-							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("eml:DTim", "http://www.energistics.org/energyml/data/commonv2"), Altova.Functions.Core.Box(Altova.CoreTypes.DateTimeToString(Altova.CoreTypes.ParseDateTime(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var3_DTim.Current))))));
+							state = 5;
+							if (!var3_Value.MoveNext()) { state = 6; goto case 6; }
+							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("eml:Value", "http://www.energistics.org/energyml/data/commonv2"), (new seq6_join((Altova.Mapforce.IMFNode)(var3_Value.Current))));
 							pos++;
 							return true;
+						case 6:
+							state = 8;
+							Altova.Mapforce.MFEnumerator.Dispose(var3_Value); var3_Value = null;
+							var4_MeasureClass = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("MeasureClass", "http://www.energistics.org/energyml/data/commonv2"), closure.var1_cur)).GetEnumerator();
+							goto case 8;
 						case 8:
-							state = 10;
-							Altova.Mapforce.MFEnumerator.Dispose(var3_DTim); var3_DTim = null;
-							var4_Index = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("Index", "http://www.energistics.org/energyml/data/commonv2"), closure.var1_cur)).GetEnumerator();
-							goto case 10;
-						case 10:
-							state = 10;
-							if (!var4_Index.MoveNext()) { state = 11; goto case 11; }
-							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("eml:Index", "http://www.energistics.org/energyml/data/commonv2"), Altova.Functions.Core.Box(Altova.CoreTypes.DecimalToString(Altova.CoreTypes.LongToDecimal(Altova.CoreTypes.IntToLong(Altova.CoreTypes.LongToInt(Altova.CoreTypes.DecimalToLong(Altova.CoreTypes.ParseDecimal(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var4_Index.Current))))))))));
+							state = 8;
+							if (!var4_MeasureClass.MoveNext()) { state = 9; goto case 9; }
+							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("eml:MeasureClass", "http://www.energistics.org/energyml/data/commonv2"), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var4_MeasureClass.Current))));
 							pos++;
 							return true;
+						case 9:
+							state = 11;
+							Altova.Mapforce.MFEnumerator.Dispose(var4_MeasureClass); var4_MeasureClass = null;
+							var5_DTim = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("DTim", "http://www.energistics.org/energyml/data/commonv2"), closure.var1_cur)).GetEnumerator();
+							goto case 11;
 						case 11:
-							state = 13;
-							Altova.Mapforce.MFEnumerator.Dispose(var4_Index); var4_Index = null;
-							var5_Description = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("Description", "http://www.energistics.org/energyml/data/commonv2"), closure.var1_cur)).GetEnumerator();
-							goto case 13;
-						case 13:
-							state = 13;
-							if (!var5_Description.MoveNext()) { state = 14; goto case 14; }
-							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("eml:Description", "http://www.energistics.org/energyml/data/commonv2"), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var5_Description.Current))));
+							state = 11;
+							if (!var5_DTim.MoveNext()) { state = 12; goto case 12; }
+							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("eml:DTim", "http://www.energistics.org/energyml/data/commonv2"), Altova.Functions.Core.Box(Altova.CoreTypes.DateTimeToString(Altova.CoreTypes.ParseDateTime(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var5_DTim.Current))))));
 							pos++;
 							return true;
+						case 12:
+							state = 14;
+							Altova.Mapforce.MFEnumerator.Dispose(var5_DTim); var5_DTim = null;
+							var6_Index = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("Index", "http://www.energistics.org/energyml/data/commonv2"), closure.var1_cur)).GetEnumerator();
+							goto case 14;
 						case 14:
+							state = 14;
+							if (!var6_Index.MoveNext()) { state = 15; goto case 15; }
+							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("eml:Index", "http://www.energistics.org/energyml/data/commonv2"), Altova.Functions.Core.Box(Altova.CoreTypes.DecimalToString(Altova.CoreTypes.LongToDecimal(Altova.CoreTypes.IntToLong(Altova.CoreTypes.LongToInt(Altova.CoreTypes.DecimalToLong(Altova.CoreTypes.ParseDecimal(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var6_Index.Current))))))))));
+							pos++;
+							return true;
+						case 15:
+							state = 17;
+							Altova.Mapforce.MFEnumerator.Dispose(var6_Index); var6_Index = null;
+							var7_Description = (Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("Description", "http://www.energistics.org/energyml/data/commonv2"), closure.var1_cur)).GetEnumerator();
+							goto case 17;
+						case 17:
+							state = 17;
+							if (!var7_Description.MoveNext()) { state = 18; goto case 18; }
+							current = Altova.Functions.Core.CreateElement(Altova.Functions.Core.CreateQName("eml:Description", "http://www.energistics.org/energyml/data/commonv2"), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var7_Description.Current))));
+							pos++;
+							return true;
+						case 18:
 							state = 0;
-							Altova.Mapforce.MFEnumerator.Dispose(var5_Description); var5_Description = null;
+							Altova.Mapforce.MFEnumerator.Dispose(var7_Description); var7_Description = null;
 							return false;
 						}
 					}
@@ -894,10 +970,12 @@ namespace Map20To21
 
 				public void Dispose() 
 				{
-					Altova.Mapforce.MFEnumerator.Dispose(var2_MeasureClass); var2_MeasureClass = null;
-					Altova.Mapforce.MFEnumerator.Dispose(var3_DTim); var3_DTim = null;
-					Altova.Mapforce.MFEnumerator.Dispose(var4_Index); var4_Index = null;
-					Altova.Mapforce.MFEnumerator.Dispose(var5_Description); var5_Description = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var2_Name); var2_Name = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var3_Value); var3_Value = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var4_MeasureClass); var4_MeasureClass = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var5_DTim); var5_DTim = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var6_Index); var6_Index = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var7_Description); var7_Description = null;
 				}
 			}
 		}
@@ -920,8 +998,7 @@ namespace Map20To21
 				private object current = null;
 				private int pos = 0;
 				private readonly seq6_join closure;
-				private Altova.Mapforce.IMFNode var2_Value;
-				private IEnumerator var3_uom;
+				private IEnumerator var2_uom;
 				public Enumerator(seq6_join closure) 
 				{
 					this.closure = closure;
@@ -939,19 +1016,18 @@ namespace Map20To21
 						{
 						case 1:
 							state = 2;
-							var2_Value = ((Altova.Mapforce.IMFNode)Altova.Functions.Core.First(Altova.Functions.Core.FilterElements(Altova.Functions.Core.CreateQName("Value", "http://www.energistics.org/energyml/data/commonv2"), closure.var1_cur)));
-							var3_uom = (Altova.Functions.Core.FilterAttributes(Altova.Functions.Core.CreateQName("uom", ""), var2_Value)).GetEnumerator();
+							var2_uom = (Altova.Functions.Core.FilterAttributes(Altova.Functions.Core.CreateQName("uom", ""), closure.var1_cur)).GetEnumerator();
 							goto case 2;
 						case 2:
 							state = 2;
-							if (!var3_uom.MoveNext()) { state = 3; goto case 3; }
-							current = Altova.Functions.Core.CreateAttribute(Altova.Functions.Core.CreateQName("uom", ""), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var3_uom.Current))));
+							if (!var2_uom.MoveNext()) { state = 3; goto case 3; }
+							current = Altova.Functions.Core.CreateAttribute(Altova.Functions.Core.CreateQName("uom", ""), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var2_uom.Current))));
 							pos++;
 							return true;
 						case 3:
 							state = 0;
-							Altova.Mapforce.MFEnumerator.Dispose(var3_uom); var3_uom = null;
-							current = Altova.CoreTypes.NodeToString(var2_Value);
+							Altova.Mapforce.MFEnumerator.Dispose(var2_uom); var2_uom = null;
+							current = Altova.CoreTypes.NodeToString(closure.var1_cur);
 							pos++;
 							return true;
 						}
@@ -961,7 +1037,7 @@ namespace Map20To21
 
 				public void Dispose() 
 				{
-					Altova.Mapforce.MFEnumerator.Dispose(var3_uom); var3_uom = null;
+					Altova.Mapforce.MFEnumerator.Dispose(var2_uom); var2_uom = null;
 				}
 			}
 		}
@@ -1024,11 +1100,11 @@ namespace Map20To21
 				}
 			}
 		}
-		class seq8_seq_ : IEnumerable
+		class seq8_join : IEnumerable
 		{
 			private readonly Altova.Mapforce.IMFNode var1_cur;
 
-			public seq8_seq_(
+			public seq8_join(
 				Altova.Mapforce.IMFNode var1_cur
 			)
 			{
@@ -1042,8 +1118,9 @@ namespace Map20To21
 				private int state = 1;
 				private object current = null;
 				private int pos = 0;
-				private readonly seq8_seq_ closure;
-				public Enumerator(seq8_seq_ closure) 
+				private readonly seq8_join closure;
+				private IEnumerator var2_uom;
+				public Enumerator(seq8_join closure) 
 				{
 					this.closure = closure;
 				}
@@ -1060,11 +1137,17 @@ namespace Map20To21
 						{
 						case 1:
 							state = 2;
-							current = Altova.Functions.Core.CreateAttribute(Altova.Functions.Core.CreateQName("uom", ""), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)Altova.Functions.Core.First(Altova.Functions.Core.FilterAttributes(Altova.Functions.Core.CreateQName("uom", ""), closure.var1_cur)))));
+							var2_uom = (Altova.Functions.Core.FilterAttributes(Altova.Functions.Core.CreateQName("uom", ""), closure.var1_cur)).GetEnumerator();
+							goto case 2;
+						case 2:
+							state = 2;
+							if (!var2_uom.MoveNext()) { state = 3; goto case 3; }
+							current = Altova.Functions.Core.CreateAttribute(Altova.Functions.Core.CreateQName("uom", ""), Altova.Functions.Core.Box(Altova.CoreTypes.NodeToString((Altova.Mapforce.IMFNode)(var2_uom.Current))));
 							pos++;
 							return true;
-						case 2:
+						case 3:
 							state = 0;
+							Altova.Mapforce.MFEnumerator.Dispose(var2_uom); var2_uom = null;
 							current = Altova.CoreTypes.DoubleToString(Altova.CoreTypes.ParseDouble(Altova.CoreTypes.NodeToString(closure.var1_cur)));
 							pos++;
 							return true;
@@ -1075,6 +1158,7 @@ namespace Map20To21
 
 				public void Dispose() 
 				{
+					Altova.Mapforce.MFEnumerator.Dispose(var2_uom); var2_uom = null;
 				}
 			}
 		}

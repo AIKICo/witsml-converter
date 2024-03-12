@@ -25,7 +25,7 @@
 					</data>
 				</component>
 				<component name="Rig" library="xml" uid="2" kind="14">
-					<properties XSLTTargetEncoding="UTF-8"/>
+					<properties XSLTTargetEncoding="UTF-8" EnableMinMaxOccursOptimizations="0"/>
 					<view rbx="360" rby="933"/>
 					<data>
 						<root scrollposition="2">
@@ -106,7 +106,7 @@
 					</data>
 				</component>
 				<component name="Rig" library="xml" uid="3" kind="14">
-					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1" EnableMinMaxOccursOptimizations="0"/>
 					<view ltx="759" rbx="1196" rby="933"/>
 					<data>
 						<root scrollposition="2">
@@ -192,7 +192,7 @@
 								</entry>
 							</entry>
 						</root>
-						<document schema="..\Standards\energyML_202205\energyml\data\witsml\v2.1\xsd_schemas\Rig.xsd" instanceroot="{}Rig" outputinstance="..\Standards\energyML_202205\energyml\data\witsml\v2.1\xsd_schemas\Rig.xml"/>
+						<document schema="..\Energistics\energyml\data\witsml\v2.1\xsd_schemas\Rig.xsd" instanceroot="{}Rig" outputinstance="..\Energistics\energyml\data\witsml\v2.1\xsd_schemas\Rig.xml"/>
 					</data>
 				</component>
 				<component name="constant" library="core" uid="6" kind="2">

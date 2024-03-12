@@ -399,3 +399,5 @@ FodyWeavers.xsd
 
 # Energistics standards files
 /Mappings/Energistics/energyml/
+/Mappings/20To21/output/
+/Mappings/21To20/output/
