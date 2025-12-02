@@ -14,8 +14,6 @@ using System;
 using System.Text;
 using System.Xml;
 using System.Net;
-using System.Web;
-using System.IO;
 
 namespace Altova.Xml
 {

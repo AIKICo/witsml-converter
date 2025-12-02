@@ -3,7 +3,6 @@
 
 
 using System;
-using Altova;
 
 namespace Altova.Types
 {

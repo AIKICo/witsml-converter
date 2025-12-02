@@ -12,11 +12,8 @@
 //
 
 using System;
-using System.Globalization;
-using System.Collections;
 using System.Text.RegularExpressions;
 using System.Text;
-using Altova.Types;
 
 namespace Altova.Functions
 {

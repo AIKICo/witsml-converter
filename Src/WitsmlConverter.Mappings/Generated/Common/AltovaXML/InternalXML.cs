@@ -12,7 +12,6 @@
 
 using System.Xml;
 using System.Collections;
-using Altova.TypeInfo;
 
 using System.Text;
 

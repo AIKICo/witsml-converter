@@ -4,8 +4,6 @@
 using Altova.TypeInfo;
 using Altova.Types;
 using System.Xml;
-using System.Text;
-using System.Collections.Generic;
 
 namespace Altova.Xml
 {

@@ -11,7 +11,6 @@
 //
 
 using System;
-using Altova.Types;
 
 namespace Altova.Functions 
 {

@@ -12,15 +12,7 @@
 //
 ////////////////////////////////////////////////////////////////////////
 
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Common;
-using System.Xml;
-using Altova.Types;
-using Altova.Xml;
-using Altova.Functions;
 
 
 namespace user

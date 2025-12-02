@@ -14,7 +14,6 @@ using System;
 using System.Xml;
 using System.Collections;
 using System.Collections.Generic;
-using Altova.Types;
 using Altova.Mapforce;
 using System.Text.RegularExpressions;
 

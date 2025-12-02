@@ -12,10 +12,6 @@
 //
 
 using System;
-using System.Globalization;
-using System.Collections;
-using Altova.Types;
-using Altova.Xml;
 
 namespace Altova.Functions 
 {
